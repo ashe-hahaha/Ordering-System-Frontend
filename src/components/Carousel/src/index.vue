@@ -33,8 +33,8 @@ export default class Carousel extends Vue {
 
   carouselList: Array<CarouselImg> = [
     { id: 'shop_001', url: require('@/assets/images/delicious1.jpg') },
-    { id: 'shop_001', url: 'http://p0.meituan.net/codeman/a97baf515235f4c5a2b1323a741e577185048.jpg' },
-    { id: 'shop_001', url: 'https://p1.meituan.net/travelcube/01d2ab1efac6e2b7adcfcdf57b8cb5481085686.png' }
+    { id: 'shop_001', url: require('@/assets/images/delicious2.jpg') },
+    { id: 'shop_001', url: require('@/assets/images/delicious3.jpg') }
   ]
   foodTypeList: Array<FoodType> = []
 
