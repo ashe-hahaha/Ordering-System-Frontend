@@ -18,7 +18,7 @@ export default class Account extends Vue {
   edit: boolean[] = [false, false, false, false, false]
 
   getText(index: number) {
-    return this.edit[index] ? 'save' : 'change'
+    return this.edit[index] ? 'Save' : 'Change'
   }
 
   mounted() {
