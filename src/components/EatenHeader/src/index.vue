@@ -23,35 +23,35 @@ export default class EatenHeader extends Vue {
     {
       id: '1',
       routerLink: 'test1',
-      value: '个人中心',
+      value: 'User Center',
       children: [
-        { id: '1-1', value: '我的订单', routerLink: 'order' },
-        { id: '1-3', value: '我的收藏', routerLink: 'favorites' },
-        { id: '1-2', value: '抵用券', routerLink: 'coupon' },
-        { id: '1-4', value: '账户设置', routerLink: 'account' }
+        { id: '1-1', value: 'My Orders', routerLink: 'order' },
+        { id: '1-3', value: 'My Favorites', routerLink: 'favorites' },
+        { id: '1-2', value: 'coupon', routerLink: 'coupon' },
+        { id: '1-4', value: 'Account Settings', routerLink: 'account' }
       ]
     },
-    {
-      id: '2',
-      value: '手机访问',
-      routerLink: 'test4',
-      onMouseover: this.appViewer
-    },
+    // {
+    //   id: '2',
+    //   value: '手机访问',
+    //   routerLink: 'test4',
+    //   onMouseover: this.appViewer
+    // },
     {
       id: '3',
-      value: '购物车',
+      value: 'Shopping Cart',
       routerLink: 'test7',
       onClick: this.showShoppingCart
     },
-    {
-      id: '4',
-      value: '网站导航',
-      routerLink: 'test5',
-      children: [
-        { id: '3-1', value: '美团外卖', routerLink: 'test6' },
-        { id: '3-2', value: '饿了么外卖', routerLink: 'test7' }
-      ]
-    }
+    // {
+    //   id: '4',
+    //   value: '网站导航',
+    //   routerLink: 'test5',
+    //   children: [
+    //     { id: '3-1', value: '美团外卖', routerLink: 'test6' },
+    //     { id: '3-2', value: '饿了么外卖', routerLink: 'test7' }
+    //   ]
+    // }
   ]
   // 轮播旁的菜单
   headerNavMenu: Array<Nav> = [
