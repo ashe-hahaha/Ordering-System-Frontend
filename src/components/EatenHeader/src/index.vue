@@ -158,7 +158,7 @@ export default class EatenHeader extends Vue {
                   {this.userName}
                 </router-link>
                 <a href="#" onClick={this.logOut}>
-                  注销
+                  Log out
                 </a>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default class EatenHeader extends Vue {
             <el-input
               v-model={this.searchContent}
               onChange={() => this.serachFood(this.searchContent)}
-              placeholder="搜索美食名称或者标签"></el-input>
+              placeholder="Enter the food name or tags"></el-input>
             <el-button
               type="primary"
               icon="el-icon-search"
@@ -212,6 +212,7 @@ export default class EatenHeader extends Vue {
 </script>
 <style scoped lang="scss">
 @import '@/styles/constant.scss';
+
 .eaten-header {
   min-height: 197px;
   background: #fff;
@@ -226,6 +227,27 @@ export default class EatenHeader extends Vue {
     padding: 0 $padding;
     display: flex;
     justify-content: space-between;
+    /*搜索组件最外层div */
+    .eaten-header-mid-search {
+      width: 300px;
+      margin-right: 15px;
+      border-radius: 95px;
+      background: rgb(0 234 245 / 48%);
+    }
+    /*搜索input框 */
+    :deep(.el-input__wrapper) {
+      background-color: transparent;/*覆盖原背景颜色，设置成透明 */
+      border-radius: 95px;
+      border: 0;
+      box-shadow: 0 0 0 0px;
+    }
+    /*搜索button按钮 */
+    :deep(.el-input-group__append) {
+      background: rgb(0 234 245 / 48%);
+      border-radius: 95px;
+      border: 0;
+      box-shadow: 0 0 0 0px;
+    }
     .user-ico {
       line-height: 40px;
       cursor: pointer;
