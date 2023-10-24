@@ -51,8 +51,8 @@ export default class ShoppingCart extends Vue {
       if (this.userId && this.userId !== '') {
         await this.shopping(id)
       } else {
-        this.$alert('请先登录', '警告', {
-          confirmButtonText: '确定',
+        this.$alert('Please login first', 'Hint', {
+          confirmButtonText: 'Confirm',
           type: 'warning'
         })
       }
@@ -77,7 +77,7 @@ export default class ShoppingCart extends Vue {
     this.visible = false
     this.$message({
       type: 'success',
-      message: '操作成功！'
+      message: 'The operation was successful!'
     })
   }
 
@@ -90,7 +90,7 @@ export default class ShoppingCart extends Vue {
       .then((res) => {
         this.$message({
           type: 'success',
-          message: '添加成功'
+          message: 'Add successfully'
         })
         this.emitNum()
       })
@@ -155,16 +155,16 @@ export default class ShoppingCart extends Vue {
     return (
       <div class="shoppingcart">
         <el-drawer
-          title="购物车"
+          title="Shopping cart"
           visible={this.visible}
           {...{ on: { 'update:visible': (e: any) => (this.visible = e) } }}
           onClose={this.handleClose}>
           <div class="shoppingcart-btn">
-            <a onClick={this.checkAll}>全选</a>
-            <a onClick={this.clearAll}>清空</a>
+            <a onClick={this.checkAll}>Select all</a>
+            <a onClick={this.clearAll}>Clear all</a>
           </div>
           <p v-show={this.data && this.data.length === 0} class="desc">
-            无商品
+            No products
           </p>
           <ul class="food">
             {this.data.map((item, index) => {
@@ -186,10 +186,10 @@ export default class ShoppingCart extends Vue {
             })}
           </ul>
           <div class="bottom-price">
-            合计：<span>{this.price}￥</span>
+            Total:<span>{this.price}￥</span>
           </div>
           <el-button type="primary" disabled={this.isDisabled} onClick={this.submint}>
-            去结算
+            Check out
           </el-button>
         </el-drawer>
       </div>
