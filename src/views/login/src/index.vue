@@ -29,7 +29,7 @@ export default class Login extends Vue {
   vUserName(rule: any, value: string, callback: Function) {
     const reg = /^[0-9a-zA-Z_]{3,12}$/
     if (!value || !reg.test(value)) {
-      callback('用户名错误')
+      callback('wrong username')
     }
     callback()
   }
@@ -37,7 +37,7 @@ export default class Login extends Vue {
   vPassWord(rule: any, value: string, callback: Function) {
     const reg = /^[0-9a-zA-Z_]{6,12}$/
     if (!value || !reg.test(value)) {
-      callback('密码错误')
+      callback('wrong password')
     }
     callback()
   }
@@ -61,7 +61,7 @@ export default class Login extends Vue {
             .catch((err) => {
               this.$message({
                 type: 'error',
-                message: err || '登录失败'
+                message: err || 'fail to login'
               })
             })
         }
@@ -69,7 +69,7 @@ export default class Login extends Vue {
     } catch (err) {
       this.$message({
         type: 'error',
-        message: err || '登录失败'
+        message: err || 'fail to login'
       })
     }
   }
@@ -79,11 +79,11 @@ export default class Login extends Vue {
       <div class="login-form-wrapper">
         <div class="login-top">
           <logo></logo>
-          <router-link to={{ name: 'register' }}>注册</router-link>
+          <router-link to={{ name: 'register' }}>login</router-link>
         </div>
         <div class="top-line"></div>
         <div class="login-form">
-          <h2>登录</h2>
+          <h2>login</h2>
           <el-form
             {...{
               props: {
@@ -94,18 +94,18 @@ export default class Login extends Vue {
             rules={this.rules}
             ref="ruleForm"
             class="ruleForm">
-            <el-form-item label="用户名" prop="userName">
+            <el-form-item label="username" prop="userName">
               <el-input clearable v-model={this.ruleForm.userName}></el-input>
             </el-form-item>
-            <el-form-item label="密码" prop="password">
+            <el-form-item label="password" prop="password">
               <el-input clearable type="password" v-model={this.ruleForm.password}></el-input>
             </el-form-item>
             <el-form-item>
-              <router-link to={{ name: 'register' }}>忘记密码?</router-link>
+              <router-link to={{ name: 'register' }}>forget password?</router-link>
             </el-form-item>
             <el-form-item>
               <el-button type="primary" onClick={this.submitForm}>
-                登录
+                login
               </el-button>
             </el-form-item>
           </el-form>
