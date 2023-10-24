@@ -21,11 +21,11 @@ export default class Order extends Vue {
   protected render() {
     return (
       <el-tabs v-model={this.activeName}>
-        <el-tab-pane label="可用卷" name="first">
-          <span>您还没抵用券</span>
+        <el-tab-pane label="Available coupons" name="first">
+          <span>You don't have coupons</span>
         </el-tab-pane>
-        <el-tab-pane label="失效卷" name="second">
-          <span>您还没抵用券</span>
+        <el-tab-pane label="Expired coupons" name="second">
+          <span>You don't have coupons</span>
         </el-tab-pane>
       </el-tabs>
     )
