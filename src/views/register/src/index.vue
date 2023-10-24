@@ -21,25 +21,25 @@ export default class Register extends Vue {
 
   rules = {
     userName: [
-      { required: true, message: '请输入用户名', trigger: 'blur' },
-      { min: 3, max: 12, message: '长度在 3 到 12 个字符', trigger: 'change' }
+      { required: true, message: 'Please input the username', trigger: 'blur' },
+      { min: 3, max: 12, message: '3 to 12 characters in length', trigger: 'change' }
     ],
     // phoneNumber: [{ type: 'phoneNumber', required: true, message: '请输入手机号码', trigger: 'change' }],
     checkPass: [
-      { required: true, message: '请再次输入密码', trigger: 'blur' },
-      { min: 6, max: 12, message: '密码长度在 6 到 12 个字符', trigger: 'change' },
+      { required: true, message: 'Please enter your password again', trigger: 'blur' },
+      { min: 6, max: 12, message: 'Password length between 6 and 12 characters', trigger: 'change' },
       { validator: this.validateCheckPass, trigger: 'blur' }
     ],
-    checked: [{ required: true, message: '请勾选服务协议', trigger: 'blur' }],
+    checked: [{ required: true, message: 'Please check the service agreement', trigger: 'blur' }],
     password: [
-      { required: true, message: '请输入密码', trigger: 'blur' },
-      { min: 6, max: 12, message: '密码长度在 6 到 12 个字符', trigger: 'change' }
+      { required: true, message: 'Please enter your password', trigger: 'blur' },
+      { min: 6, max: 12, message: 'Password length between 6 and 12 characters', trigger: 'change' }
     ]
   }
 
   validateCheckPass(rule: any, value: string, callback: Function) {
     if (value && value !== this.ruleForm.password) {
-      callback('两次密码输入不一致')
+      callback('Inconsistency between two password entries')
     }
     callback()
   }
@@ -80,11 +80,11 @@ export default class Register extends Vue {
       <div class="login-form-wrapper">
         <div class="login-top">
           <logo></logo>
-          <router-link to={{ name: 'login' }}>登录</router-link>
+          <router-link to={{ name: 'login' }}>Login</router-link>
         </div>
         <div class="top-line"></div>
         <div class="login-form">
-          <h2>注册</h2>
+          <h2>Signup</h2>
           <el-form
             {...{
               props: {
@@ -95,28 +95,28 @@ export default class Register extends Vue {
             status-icon
             ref="ruleForm"
             class="ruleForm">
-            <el-form-item label="用户名" prop="userName">
+            <el-form-item label="Username" prop="userName">
               <el-input v-model={this.ruleForm.userName}></el-input>
             </el-form-item>
-            <el-form-item label="手机号" prop="phoneNumber">
+            <el-form-item label="Phone number" prop="phoneNumber">
               <el-input v-model={this.ruleForm.phoneNumber}></el-input>
               <Button>获取验证码</Button>
             </el-form-item>
             <el-form-item label="短信动态码" prop="verificationCode">
               <el-input v-model={this.ruleForm.verificationCode}></el-input>
             </el-form-item>
-            <el-form-item label="密码" prop="password">
+            <el-form-item label="Password" prop="password">
               <el-input type="password" v-model={this.ruleForm.password} autocomplete="off"></el-input>
             </el-form-item>
-            <el-form-item label="确认密码" prop="checkPass">
+            <el-form-item label="Check password" prop="checkPass">
               <el-input type="password" v-model={this.ruleForm.checkPass} autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item prop="checked">
-              <el-checkbox v-model={this.ruleForm.checked}>同意 hxd吃了吗用户服务协议</el-checkbox>
+              <el-checkbox v-model={this.ruleForm.checked}>Agree to FDP User Service Agreement</el-checkbox>
             </el-form-item>
             <el-form-item>
               <el-button type="primary" onClick={this.submitForm}>
-                注册
+                Sign up
               </el-button>
             </el-form-item>
           </el-form>
