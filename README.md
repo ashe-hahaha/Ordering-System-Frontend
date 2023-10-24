@@ -1,5 +1,7 @@
 # have_you_eaten
 
+## Node Version：14.x
+
 ## Project setup
 ```
 npm install
