@@ -48,7 +48,7 @@ export default class Carousel extends Vue {
       <div>
         <div class="carousel">
           <el-card class="carousel-card-left none-600" shadow="never">
-            <h2 class="carousel-card-left-title">美食分类</h2>
+            <h2 class="carousel-card-left-title">Food categories</h2>
             <ul class="carousel-card-left-menu">
               {this.foodTypeList.map((item) => {
                 return (
@@ -99,30 +99,30 @@ export default class Carousel extends Vue {
                 <ul class="user-nav">
                   <li onClick={() => this.goView('order')}>
                     <i class="el-icon-s-order"></i>
-                    <span>我的订单</span>
+                    <span>My orders</span>
                   </li>
                   <li onClick={() => this.goView('favorites')}>
                     <i class="el-icon-star-on"></i>
-                    <span>我的收藏</span>
+                    <span>My favorites</span>
                   </li>
                   <li onClick={() => this.$showCart()}>
                     <i class="el-icon-shopping-cart-2"></i>
-                    <span>购物车</span>
+                    <span>Shopping cart</span>
                   </li>
                   <li onClick={() => this.goView('coupon')}>
                     <i class="el-icon-coin"></i>
-                    <span>抵用券</span>
+                    <span>Coupon</span>
                   </li>
                   <li onClick={() => this.goView('account')}>
                     <i class="el-icon-more"></i>
-                    <span>更多</span>
+                    <span>More</span>
                   </li>
                 </ul>
               </el-card>
             )}
             <el-card shadow="never">
               <img width="95" src={this.download}></img>
-              <p class="download-label">扫码手机访问</p>
+              <p class="download-label">Scan the QR code</p>
             </el-card>
           </div>
         </div>
