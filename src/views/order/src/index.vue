@@ -7,8 +7,8 @@ import { Component, Vue, Watch } from 'vue-property-decorator'
 import { OrderList } from './index'
 import { getOrder } from '@/api/all'
 
-const typeToText = ['', '待付款', '待使用', '待评价', '售后']
-const typeToPrompt = ['总价', '需付款', '', '', '']
+const typeToText = ['', 'Waiting for pay', 'Waiting for use', 'Waiting for comment', 'After sale']
+const typeToPrompt = ['Total', 'Payment required', '', '', '']
 
 const indexToView = ['', 'first', 'second', 'third', 'fourth']
 
@@ -44,9 +44,9 @@ export default class Order extends Vue {
   protected render() {
     return (
       <el-tabs v-model={this.activeName}>
-        <el-tab-pane label="全部订单" name="first">
+        <el-tab-pane label="All order" name="first">
           <ul class="order-list">
-            {this.orderData.firest?.length === 0 && <p>暂无记录</p>}
+            {this.orderData.firest?.length === 0 && <p>No record</p>}
             {this.orderData.firest &&
               this.orderData.firest.map((item) => {
                 return (
@@ -67,9 +67,9 @@ export default class Order extends Vue {
               })}
           </ul>
         </el-tab-pane>
-        <el-tab-pane label="待付款" name="second">
+        <el-tab-pane label="Waiting for pay" name="second">
           <ul class="order-list">
-            {this.orderData.second?.length === 0 && <p>暂无记录</p>}
+            {this.orderData.second?.length === 0 && <p>No record</p>}
             {this.orderData.second &&
               this.orderData.second.map((item) => {
                 return (
@@ -90,9 +90,9 @@ export default class Order extends Vue {
               })}
           </ul>
         </el-tab-pane>
-        <el-tab-pane label="待评价" name="third">
+        <el-tab-pane label="Waiting for comment" name="third">
           <ul class="order-list">
-            {this.orderData.third?.length === 0 && <p>暂无记录</p>}
+            {this.orderData.third?.length === 0 && <p>No record</p>}
             {this.orderData.third &&
               this.orderData.third.map((item) => {
                 return (
@@ -100,7 +100,7 @@ export default class Order extends Vue {
                     <img src={item.url} />
                     <div>
                       <span class="label">{item.label}</span>
-                      <span class="num">{item.num} 份，</span>
+                      <span class="num">{item.num} ，</span>
                       <span class="desc">{item.desc}</span>
                       <span class="date">{item.date}</span>
                     </div>
@@ -113,9 +113,9 @@ export default class Order extends Vue {
               })}
           </ul>
         </el-tab-pane>
-        <el-tab-pane label="退款/售后" name="fourth">
+        <el-tab-pane label="After sale" name="fourth">
           <ul class="order-list">
-            {this.orderData.fourth?.length === 0 && <p>暂无记录</p>}
+            {this.orderData.fourth?.length === 0 && <p>No record</p>}
             {this.orderData.fourth &&
               this.orderData.fourth.map((item) => {
                 return (
@@ -123,7 +123,7 @@ export default class Order extends Vue {
                     <img src={item.url} />
                     <div>
                       <span class="label">{item.label}</span>
-                      <span class="num">{item.num} 份，</span>
+                      <span class="num">{item.num} ，</span>
                       <span class="desc">{item.desc}</span>
                       <span class="date">{item.date}</span>
                     </div>
