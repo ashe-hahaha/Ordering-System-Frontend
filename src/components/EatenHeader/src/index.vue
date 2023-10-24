@@ -183,11 +183,7 @@ export default class EatenHeader extends Vue {
             <el-input
               v-model={this.searchContent}
               onChange={() => this.serachFood(this.searchContent)}
-<<<<<<< HEAD
               placeholder="Enter the food name or tags"></el-input>
-=======
-              placeholder="Search for food"></el-input>
->>>>>>> 8cb3865becaf3fdd1e7989ade24343c7559c79c8
             <el-button
               type="primary"
               icon="el-icon-search"
