@@ -164,7 +164,7 @@ export default class ShoppingCart extends Vue {
             <a onClick={this.clearAll}>Clear all</a>
           </div>
           <p v-show={this.data && this.data.length === 0} class="desc">
-            No products
+             No products
           </p>
           <ul class="food">
             {this.data.map((item, index) => {
@@ -176,7 +176,7 @@ export default class ShoppingCart extends Vue {
                     <i class="el-icon-delete top" onClick={(e: any) => this.clearFood(item, e)}></i>
                     <div class="label">
                       <span>{item.name}</span>
-                      <span>￥{item.price}</span>
+                      <span>${item.price}</span>
                     </div>
                     <p>{item.desc}</p>
                     <p>x{item.number}</p>
@@ -186,7 +186,7 @@ export default class ShoppingCart extends Vue {
             })}
           </ul>
           <div class="bottom-price">
-            Total:<span>{this.price}￥</span>
+            Total:<span>{this.price}$</span>
           </div>
           <el-button type="primary" disabled={this.isDisabled} onClick={this.submint}>
             Check out
