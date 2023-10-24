@@ -7,8 +7,8 @@ import { Component, Vue } from 'vue-property-decorator'
 import Logo from '@/components/logo/index'
 
 interface Form {
-  password?: string;
-  userName?: string;
+  Password?: string;
+  SserName?: string;
 }
 
 @Component({
@@ -29,7 +29,7 @@ export default class Login extends Vue {
   vUserName(rule: any, value: string, callback: Function) {
     const reg = /^[0-9a-zA-Z_]{3,12}$/
     if (!value || !reg.test(value)) {
-      callback('wrong username')
+      callback('Wrong username')
     }
     callback()
   }
@@ -37,7 +37,7 @@ export default class Login extends Vue {
   vPassWord(rule: any, value: string, callback: Function) {
     const reg = /^[0-9a-zA-Z_]{6,12}$/
     if (!value || !reg.test(value)) {
-      callback('wrong password')
+      callback('Wrong password')
     }
     callback()
   }
@@ -61,7 +61,7 @@ export default class Login extends Vue {
             .catch((err) => {
               this.$message({
                 type: 'error',
-                message: err || 'fail to login'
+                message: err || 'Fail to login'
               })
             })
         }
@@ -69,7 +69,7 @@ export default class Login extends Vue {
     } catch (err) {
       this.$message({
         type: 'error',
-        message: err || 'fail to login'
+        message: err || 'Fail to login'
       })
     }
   }
@@ -94,14 +94,14 @@ export default class Login extends Vue {
             rules={this.rules}
             ref="ruleForm"
             class="ruleForm">
-            <el-form-item label="username" prop="userName">
+            <el-form-item label="Username" prop="userName">
               <el-input clearable v-model={this.ruleForm.userName}></el-input>
             </el-form-item>
-            <el-form-item label="password" prop="password">
+            <el-form-item label="Password" prop="password">
               <el-input clearable type="password" v-model={this.ruleForm.password}></el-input>
             </el-form-item>
             <el-form-item>
-              <router-link to={{ name: 'register' }}>forget password?</router-link>
+              <router-link to={{ name: 'register' }}>Forget password?</router-link>
             </el-form-item>
             <el-form-item>
               <el-button type="primary" onClick={this.submitForm}>
