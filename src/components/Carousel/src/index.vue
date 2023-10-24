@@ -73,19 +73,35 @@ export default class Carousel extends Vue {
               )
             })}
           </el-carousel>
+          {/* <div class="carousel-card-right none-600">
+            {!this.isLogin && (
+              <el-card shadow="never">
+                <img class="avatar" src={this.avatarImg} />
+                <p class="user-name-mid">Hi!</p>
+                <router-link class="a-button" to={{ name: 'register' }}>
+                  Sign Up
+                </router-link>
+                <router-link class="a-button" to={{ name: 'login' }}>
+                  Log in
+                </router-link>
+              </el-card>
+            )} */}
           <div class="carousel-card-right none-600">
             {!this.isLogin && (
               <el-card shadow="never">
                 <img class="avatar" src={this.avatarImg} />
-                <p class="user-name-mid">Hi！你好</p>
-                <router-link class="a-button" to={{ name: 'register' }}>
-                  注册
+                <p class="user-name-mid">Hi!</p>
+                <router-link to="/login">
+                  <el-button round>Log in</el-button>
                 </router-link>
-                <router-link class="a-button" to={{ name: 'login' }}>
-                  立即登录
+                <br></br>
+                <br></br>
+                <router-link to="/register">
+                  <el-button round>Sign Up</el-button>
                 </router-link>
               </el-card>
             )}
+
             {this.isLogin && (
               <el-card shadow="never">
                 <div class="top" onClick={() => this.goView('account')}>
