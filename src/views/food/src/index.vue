@@ -54,8 +54,8 @@ export default class Food extends Vue {
       // console.log({ id: this.foodVal.goodD.id, label })
       addFoodLabel({ id: this.foodVal.goodD.id, label })
     } else {
-      this.$alert('请先登录', '警告', {
-        confirmButtonText: '确定',
+      this.$alert('Please login first', 'Hint', {
+        confirmButtonText: 'Confirm',
         type: 'warning'
       })
     }
@@ -74,49 +74,49 @@ export default class Food extends Vue {
         </div>
         <div class="food-dialog-mid">
           <div>
-            <span>月售 {this.foodVal.goodD.monthlySale}</span>
-            <span>好评率 {this.foodVal.goodD.favorableRate}%</span>
+            <span>Sell in a month {this.foodVal.goodD.monthlySale}</span>
+            <span>favorable evaluation rate {this.foodVal.goodD.favorableRate}%</span>
           </div>
           <div>{this.foodVal.goodD.discount != 1 ? (this.foodVal.goodD.discount * 10).toFixed(1) : '0.99'}折</div>
           <div>
             <span class="pri">{(this.foodVal.goodD.price * this.foodVal.goodD.discount).toFixed(1)}</span>
             <span class="del">￥{this.foodVal.goodD.price}</span>
-            <span class="other">包装费￥{this.foodVal.goodD.packagingCosts}/份</span>
+            <span class="other">Package fee${this.foodVal.goodD.packagingCosts}/份</span>
             <el-button type="primary" size="small" icon="el-icon-plus" onClick={this.shopping} round>
-              加入购物车
+              Add to shoplist
             </el-button>
           </div>
         </div>
         <el-tabs v-model={this.elTabIndex} class="food-dialog-footer">
-          <el-tab-pane label="商品信息" name="first">
+          <el-tab-pane label="Product information" name="first">
             <ul>
               <li>
-                <span>商品描述</span>
+                <span>Product description</span>
                 <span>{this.foodVal.goodD.desc}</span>
               </li>
               <li>
-                <span>原料</span>
+                <span>Ingredients</span>
                 <span>{this.foodVal.goodD.material}</span>
               </li>
               <li>
-                <span>口味</span>
+                <span>flavor</span>
                 <span>{this.foodVal.goodD.taste}</span>
               </li>
               <li>
-                <span>价格说明</span>
+                <span>Fee description</span>
                 <span>{this.foodVal.goodD.priceDescription}</span>
               </li>
             </ul>
           </el-tab-pane>
-          <el-tab-pane label="评价" class="shop-card-appraisal" name="second">
+          <el-tab-pane label="Comment" class="shop-card-appraisal" name="second">
             <appraisal></appraisal>
           </el-tab-pane>
-          <el-tab-pane label="标签" class="shop-card-label" name="third">
+          <el-tab-pane label="Lable" class="shop-card-label" name="third">
             <el-input
               v-model={this.inputValue}
               ref="saveTagInput"
               size="small"
-              placeholder="请输入标签内容"
+              placeholder="Please input lable"
               maxlength="20"
               show-word-limit
               onChange={this.handleInputConfirm}></el-input>
