@@ -14,7 +14,7 @@ export default class Logo extends Vue {
     this.$router.push({name:'Home'})
   }
   protected render() {
-    return <img onClick={this.goHome} title="首页" src={this.logoImg} />
+    return <img onClick={this.goHome} title="Home" src={this.logoImg} />
   }
 }
 </script>
@@ -23,4 +23,3 @@ img {
   cursor: pointer;
 }
 </style>
-
