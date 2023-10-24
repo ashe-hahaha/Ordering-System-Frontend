@@ -12,25 +12,25 @@ import EatenFooter from '@/components/EatenFooter/index'
 })
 export default class UserInfo extends Vue {
   navList: { label: string; type: string; routLink: any }[] = [
-    { label: '我的订单', type: 'big', routLink: { name: 'order', index: 1 } },
-    { label: '全部订单', type: 'mid', routLink: { name: 'order', index: 1 } },
-    { label: '待付款', type: 'mid', routLink: { name: 'order', index: 2 } },
-    { label: '待评价', type: 'mid', routLink: { name: 'order', index: 3 } },
-    { label: '退款/售后', type: 'mid', routLink: { name: 'order', index: 4 } },
-    { label: '我的收藏', type: 'big', routLink: { name: 'favorites', index: 1 } },
-    { label: '收藏的商家', type: 'mid', routLink: { name: 'favorites', index: 1 } },
-    { label: '收藏的团购', type: 'mid', routLink: { name: 'favorites', index: 2 } },
-    { label: '抵用券', type: 'big', routLink: { name: 'coupon', index: 1 } },
-    { label: '可用卷', type: 'mid', routLink: { name: 'coupon', index: 1 } },
-    { label: '失效卷', type: 'mid', routLink: { name: 'coupon', index: 2 } },
-    { label: '个人信息', type: 'big', routLink: { name: 'account', index: 1 } },
-    { label: '账户设置', type: 'mid', routLink: { name: 'account', index: 1 } }
+    { label: 'My order', type: 'big', routLink: { name: 'order', index: 1 } },
+    { label: 'All order', type: 'mid', routLink: { name: 'order', index: 1 } },
+    { label: 'Waiting for pay', type: 'mid', routLink: { name: 'order', index: 2 } },
+    { label: 'Waiting for comment', type: 'mid', routLink: { name: 'order', index: 3 } },
+    { label: 'After sale', type: 'mid', routLink: { name: 'order', index: 4 } },
+    { label: 'My favorite', type: 'big', routLink: { name: 'favorites', index: 1 } },
+    { label: 'Collection of businesses', type: 'mid', routLink: { name: 'favorites', index: 1 } },
+    { label: 'Collection of discount', type: 'mid', routLink: { name: 'favorites', index: 2 } },
+    { label: 'Coupon', type: 'big', routLink: { name: 'coupon', index: 1 } },
+    { label: 'Available coupon', type: 'mid', routLink: { name: 'coupon', index: 1 } },
+    { label: 'Expired coupon', type: 'mid', routLink: { name: 'coupon', index: 2 } },
+    { label: 'Personal info', type: 'big', routLink: { name: 'account', index: 1 } },
+    { label: 'Account setting', type: 'mid', routLink: { name: 'account', index: 1 } }
   ]
 
   beforeCreate() {
     if (!this.$store.getters.loginStatus) {
-      this.$alert('请先登录?', '提示', {
-        confirmButtonText: '确定',
+      this.$alert('Please login first', 'Hint', {
+        confirmButtonText: 'Confirm',
         type: 'warning'
       }).finally(() => {
         this.$router.go(-1)
