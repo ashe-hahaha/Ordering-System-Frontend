@@ -27,87 +27,12 @@ export default class ProductList extends Vue {
       <div class="product">
         <ul class="product-list product-list-recommend">
           <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
+            <span class="product-card-header-title">Recommendations for nearby hot sellers</span>
             <span class="product-card-header-all" onClick={()=>this.goShop('recommend')}>
-              全部<i class="el-icon-arrow-right"></i>
+              All<i class="el-icon-arrow-right"></i>
             </span>
           </div>
           {this.cardData.recommend && this.cardData.recommend.map((item: any) => {
-            return (
-              <li class="product-card-wrapper">
-                <product-card card={item}></product-card>
-              </li>
-            )
-          })}
-        </ul>
-        <ul class="product-list product-list-find">
-          <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
-            <span class="product-card-header-all" onClick={()=>this.goShop('find')}>
-              全部<i class="el-icon-arrow-right"></i>
-            </span>
-          </div>
-          {this.cardData.find && this.cardData.find.map((item: any) => {
-            return (
-              <li class="product-card-wrapper">
-                <product-card card={item}></product-card>
-              </li>
-            )
-          })}
-        </ul>
-        <ul class="product-list product-list-supermarket">
-          <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
-            <span class="product-card-header-all" onClick={()=>this.goShop('supermarket')}>
-              全部<i class="el-icon-arrow-right"></i>
-            </span>
-          </div>
-          {this.cardData.supermarket && this.cardData.supermarket.map((item: any) => {
-            return (
-              <li class="product-card-wrapper">
-                <product-card card={item}></product-card>
-              </li>
-            )
-          })}
-        </ul>
-        <ul class="product-list product-list-fruit">
-          <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
-            <span class="product-card-header-all" onClick={()=>this.goShop('fruit')}>
-              全部<i class="el-icon-arrow-right"></i>
-            </span>
-          </div>
-          {this.cardData.fruit && this.cardData.fruit.map((item: any) => {
-            return (
-              <li class="product-card-wrapper">
-                <product-card card={item}></product-card>
-              </li>
-            )
-          })}
-        </ul>
-        <ul class="product-list product-list-vegettables">
-          <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
-            <span class="product-card-header-all" onClick={()=>this.goShop('vegettables')}>
-              全部<i class="el-icon-arrow-right"></i>
-            </span>
-          </div>
-          {this.cardData.vegettables && this.cardData.vegettables.map((item: any) => {
-            return (
-              <li class="product-card-wrapper">
-                <product-card card={item}></product-card>
-              </li>
-            )
-          })}
-        </ul>
-        <ul class="product-list product-list-medicine">
-          <div class="product-card-header">
-            <span class="product-card-header-title">附近热卖推荐</span>
-            <span class="product-card-header-all" onClick={()=>this.goShop('medicine')}>
-              全部<i class="el-icon-arrow-right"></i>
-            </span>
-          </div>
-          {this.cardData.medicine && this.cardData.medicine.map((item: any) => {
             return (
               <li class="product-card-wrapper">
                 <product-card card={item}></product-card>
