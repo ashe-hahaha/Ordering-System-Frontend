@@ -83,7 +83,7 @@ export default class Login extends Vue {
         </div>
         <div class="top-line"></div>
         <div class="login-form">
-          <h2>login</h2>
+          <h2>Signup</h2>
           <el-form
             {...{
               props: {
