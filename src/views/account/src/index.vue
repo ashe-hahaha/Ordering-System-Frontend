@@ -18,7 +18,7 @@ export default class Account extends Vue {
   edit: boolean[] = [false, false, false, false, false]
 
   getText(index: number) {
-    return this.edit[index] ? '保存' : '修改'
+    return this.edit[index] ? 'save' : 'change'
   }
 
   mounted() {
@@ -95,17 +95,17 @@ export default class Account extends Vue {
   protected render() {
     return (
       <div class="account">
-        <p class="account-label">个人信息</p>
-        <p class="account-mini-label">账户设置</p>
+        <p class="account-label">personal info</p>
+        <p class="account-mini-label">Account set</p>
         <ul class="account-content">
           <li>
-            <span class="account-content-label">头像</span>
+            <span class="account-content-label">profile photo</span>
             <div class="avatar account-content-text">
               <img src={this.avatar} />
             </div>
           </li>
           <li>
-            <span class="account-content-label">昵称</span>
+            <span class="account-content-label">nickname</span>
             <div class="account-content-text">
               <span v-show={!this.edit[1]}>{this.name}</span>
               <el-input v-show={this.edit[1]} v-model={this.name}></el-input>
@@ -113,7 +113,7 @@ export default class Account extends Vue {
             <el-button onClick={this.editName}>{this.getText(1)}</el-button>
           </li>
           <li>
-            <span class="account-content-label">地址</span>
+            <span class="account-content-label">address</span>
             <div class="account-content-text">
               <span v-show={!this.edit[2]}>{this.address}</span>
               <el-input v-show={this.edit[2]} v-model={this.address}></el-input>
@@ -121,7 +121,7 @@ export default class Account extends Vue {
             <el-button onClick={this.editAddress}>{this.getText(2)}</el-button>
           </li>
           <li>
-            <span class="account-content-label">换绑手机</span>
+            <span class="account-content-label">change phone number</span>
             <div class="account-content-text">
               <span v-show={!this.edit[3]}>{this.phoneNumber}</span>
               <el-input v-show={this.edit[3]} v-model={this.phoneNumber}></el-input>
@@ -129,7 +129,7 @@ export default class Account extends Vue {
             <el-button onClick={this.editPhoneNumber}>{this.getText(3)}</el-button>
           </li>
           <li>
-            <span class="account-content-label">修改密码</span>
+            <span class="account-content-label">change password</span>
             <div class="account-content-text">
               <span v-show={!this.edit[4]}>******</span>
               <el-input v-show={this.edit[4]} show-password v-model={this.password}></el-input>
