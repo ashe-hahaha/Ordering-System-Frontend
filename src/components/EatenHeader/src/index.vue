@@ -138,20 +138,20 @@ export default class EatenHeader extends Vue {
       <div class="eaten-header">
         <div class="eaten-header-top">
           <div class="eaten-header-top-left">
-            <div class="eaten-header-top-left-address">
+            {/* <div class="eaten-header-top-left-address">
               <i class="el-icon-map-location"></i>
               <span>北京</span>
               <a class="eaten-header-top-left-btn" href="#">
                 切换城市
               </a>
               <span class="none-600">[门头沟区 大厂回族自治县 廊坊]</span>
-            </div>
+            </div> */}
             <div class="eaten-header-top-left-user">
               <div v-show={!this.isLogin} class="isLoginF">
                 <router-link class="orange" to={{ name: 'login' }}>
-                  立即登录
+                  Log in
                 </router-link>
-                <router-link to={{ name: 'register' }}>注册</router-link>
+                <router-link to={{ name: 'register' }}>Sign Up</router-link>
               </div>
               <div v-show={this.isLogin} class="isLoginT">
                 <router-link class="orange" to={{ name: 'account' }}>
