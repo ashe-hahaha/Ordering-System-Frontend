@@ -55,11 +55,11 @@ export default class EatenHeader extends Vue {
   ]
   // 轮播旁的菜单
   headerNavMenu: Array<Nav> = [
-    { id: createRandomId(), value: '美食外卖' },
-    { id: createRandomId(), value: '超市便利' },
-    { id: createRandomId(), value: '水果' },
-    { id: createRandomId(), value: '跑腿代购' },
-    { id: createRandomId(), value: '休闲玩乐' }
+    { id: createRandomId(), value: 'Food deliver' },
+    { id: createRandomId(), value: 'Supermaket' },
+    { id: createRandomId(), value: 'Fruit' },
+    { id: createRandomId(), value: 'Errand' },
+    { id: createRandomId(), value: 'Entertainment' }
   ]
 
   searchContent = ''
@@ -140,11 +140,11 @@ export default class EatenHeader extends Vue {
           <div class="eaten-header-top-left">
             {/* <div class="eaten-header-top-left-address">
               <i class="el-icon-map-location"></i>
-              <span>北京</span>
+              <span>Singapore</span>
               <a class="eaten-header-top-left-btn" href="#">
-                切换城市
+                change location
               </a>
-              <span class="none-600">[门头沟区 大厂回族自治县 廊坊]</span>
+              <span class="none-600">[Western NUS]</span>
             </div> */}
             <div class="eaten-header-top-left-user">
               <div v-show={!this.isLogin} class="isLoginF">
@@ -183,7 +183,7 @@ export default class EatenHeader extends Vue {
             <el-input
               v-model={this.searchContent}
               onChange={() => this.serachFood(this.searchContent)}
-              placeholder="搜索美食名称或者标签"></el-input>
+              placeholder="Search for food"></el-input>
             <el-button
               type="primary"
               icon="el-icon-search"
