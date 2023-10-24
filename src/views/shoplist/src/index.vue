@@ -20,7 +20,7 @@ export default class ShopList extends Vue {
   classification: Array<Clf> = [
     {
       id: '1',
-      label: '美食分类',
+      label: 'Food categories',
       content: []
     }
   ]
@@ -101,12 +101,12 @@ export default class ShopList extends Vue {
         <eaten-header></eaten-header>
         <div class="shoplist">
           <el-breadcrumb class="shoplist-breadcrumb" separator-class="el-icon-arrow-right">
-            <el-breadcrumb-item to={{ name: 'Home' }}>首页</el-breadcrumb-item>
-            <el-breadcrumb-item to={{ name: 'shoplist' }}>店铺列表</el-breadcrumb-item>
+            <el-breadcrumb-item to={{ name: 'Home' }}>Home</el-breadcrumb-item>
+            <el-breadcrumb-item to={{ name: 'shoplist' }}>Shop list</el-breadcrumb-item>
           </el-breadcrumb>
           <div class="shoplist-classification">
             <div v-show={this.selectContent.length !== 0} class="shoplist-classification-select">
-              <p class="tag-title">已选条件</p>
+              <p class="tag-title">Selected tag</p>
               <div class="tag-list">
                 {this.selectContent.map((item, index) => {
                   return (
@@ -116,7 +116,7 @@ export default class ShopList extends Vue {
                   )
                 })}
                 <a href="#" class="tag-list-clear" onClick={() => (this.selectContent = [])}>
-                  清除全部
+                  Clear all
                 </a>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default class ShopList extends Vue {
                 <div class="shoplist-classification-module">
                   <p class="none-600">{item.label}</p>
                   <p class={'select ' + this.isChecked} onClick={() => (this.selectContent = [])}>
-                    全部
+                    All
                   </p>
                   <el-checkbox-group v-model={this.selectContent}>
                     {item.content &&
@@ -144,16 +144,16 @@ export default class ShopList extends Vue {
           <div class="shoplist-list">
             <div class="shoplist-list-sort">
               <a ref="a1" onClick={() => this.active(1)} class="is-active" href="#">
-                综合
+                Synthesize
               </a>
               <a ref="a2" onClick={() => this.active(2)} href="#">
-                销量
+                Sales volume
               </a>
               <a ref="a3" onClick={() => this.active(3)} href="#">
-                价格
+                Prices
               </a>
               <a ref="a4" onClick={() => this.active(4)} href="#">
-                好评最多
+                Highest praise
               </a>
             </div>
             <ul class="shoplist-list-content">
@@ -168,7 +168,7 @@ export default class ShopList extends Vue {
                       <p class="label">{item.label}</p>
                       <star showText={true} num={item.rating} size={'13'}></star>
                       <p class="desc">{item.desc}</p>
-                      <p class="price">人均￥{item.price}</p>
+                      <p class="price">Per capita${item.price}</p>
                     </div>
                   </li>
                 )
