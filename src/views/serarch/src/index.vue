@@ -53,9 +53,9 @@ export default class SearchFood extends Vue {
       <div class="search">
         <eaten-header></eaten-header>
         <div class="search-content">
-          <p class="lable">搜索结果</p>
+          <p class="lable">Search results</p>
           <ul class="product-list">
-            {this.shopList.length === 0 && <p>暂无记录</p>}
+            {this.shopList.length === 0 && <p>No record</p>}
             {this.shopList.map((item) => {
               return (
                 <li class="product-card-wrapper">
