@@ -10,8 +10,8 @@
       <div class="bullshit">
         <div class="bullshit__oops">OOPS!</div>
         <div class="bullshit__headline">{{ message }}</div>
-        <div class="bullshit__info">请检查您输入的网址是否正确，请点击以下按钮返回主页或者发送错误报告</div>
-        <span class="bullshit__return-home" @click="goBack">原路返回</span>
+        <div class="bullshit__info">Please check if the URL you have entered is correct, click the following button to return to the homepage or send an error report</div>
+        <span class="bullshit__return-home" @click="goBack">Return</span>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     message() {
-      return '说这个页面你不能进......???'
+      return 'Error,You don\'t have permission to access this page'
     }
   },
   methods: {
