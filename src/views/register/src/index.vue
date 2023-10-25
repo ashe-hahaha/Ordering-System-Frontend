@@ -171,7 +171,7 @@ export default class Register extends Vue {
       }
       &:nth-child(2) {
         ::v-deep .el-input {
-          width: 77%;
+          width: 100%;
         }
       }
     }
