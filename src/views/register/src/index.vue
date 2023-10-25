@@ -26,14 +26,14 @@ export default class Register extends Vue {
     ],
     // phoneNumber: [{ type: 'phoneNumber', required: true, message: '请输入手机号码', trigger: 'change' }],
     checkPass: [
-      { required: true, message: 'Please enter your email again', trigger: 'blur' },
-      { min: 6, max: 20, message: 'Email length between 6 and 20 characters', trigger: 'change' },
+      { required: true, message: 'Please enter your password again', trigger: 'blur' },
+      { min: 6, max: 20, message: 'Password length between 6 and 20 characters', trigger: 'change' },
       { validator: this.validateCheckPass, trigger: 'blur' }
     ],
     checked: [{ required: true, message: 'Please check the service agreement', trigger: 'blur' }],
     password: [
-      { required: true, message: 'Please enter your email', trigger: 'blur' },
-      { min: 6, max: 20, message: 'Email length between 6 and 20 characters', trigger: 'change' }
+      { required: true, message: 'Please enter your password', trigger: 'blur' },
+      { min: 6, max: 20, message: 'Password length between 6 and 20 characters', trigger: 'change' }
     ]
   }
 
@@ -104,10 +104,10 @@ export default class Register extends Vue {
             <el-form-item label="Phone number" prop="phoneNumber">
               <el-input v-model={this.ruleForm.phoneNumber}></el-input>
             </el-form-item>
-            <el-form-item label="Email" prop="password">
+            <el-form-item label="Password" prop="password">
               <el-input type="password" v-model={this.ruleForm.password} autocomplete="off"></el-input>
             </el-form-item>
-            <el-form-item label="Check email" prop="checkPass">
+            <el-form-item label="Check password" prop="checkPass">
               <el-input type="password" v-model={this.ruleForm.checkPass} autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item prop="checked">
@@ -150,7 +150,7 @@ export default class Register extends Vue {
   }
   .top-line {
     width: 100%;
-    border-top: 8px solid #d8d8d8;
+    border-top: 4px solid #d8d8d8;
   }
   .login-form {
     width: 500px;
