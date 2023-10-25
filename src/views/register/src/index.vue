@@ -150,7 +150,7 @@ export default class Register extends Vue {
   }
   .top-line {
     width: 100%;
-    border-top: 2px solid #d8d8d8;
+    border-top: 4px solid #d8d8d8;
   }
   .login-form {
     width: 500px;
