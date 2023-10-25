@@ -21,25 +21,25 @@ export default class Register extends Vue {
 
   rules = {
     userName: [
-      { required: true, message: 'Please input the username', trigger: 'blur' },
+      { required: true, message: 'Please input the Firstname', trigger: 'blur' },
       { min: 3, max: 12, message: '3 to 12 characters in length', trigger: 'change' }
     ],
     // phoneNumber: [{ type: 'phoneNumber', required: true, message: '请输入手机号码', trigger: 'change' }],
     checkPass: [
-      { required: true, message: 'Please enter your password again', trigger: 'blur' },
-      { min: 6, max: 12, message: 'Password length between 6 and 12 characters', trigger: 'change' },
+      { required: true, message: 'Please enter your email again', trigger: 'blur' },
+      { min: 6, max: 20, message: 'Email length between 6 and 20 characters', trigger: 'change' },
       { validator: this.validateCheckPass, trigger: 'blur' }
     ],
     checked: [{ required: true, message: 'Please check the service agreement', trigger: 'blur' }],
     password: [
-      { required: true, message: 'Please enter your password', trigger: 'blur' },
-      { min: 6, max: 12, message: 'Password length between 6 and 12 characters', trigger: 'change' }
+      { required: true, message: 'Please enter your email', trigger: 'blur' },
+      { min: 6, max: 20, message: 'Email length between 6 and 20 characters', trigger: 'change' }
     ]
   }
 
   validateCheckPass(rule: any, value: string, callback: Function) {
     if (value && value !== this.ruleForm.password) {
-      callback('Inconsistency between two password entries')
+      callback('Inconsistency between two email entries')
     }
     callback()
   }
@@ -95,20 +95,19 @@ export default class Register extends Vue {
             status-icon
             ref="ruleForm"
             class="ruleForm">
-            <el-form-item label="Username" prop="userName">
+            <el-form-item label="Firstname" prop="userName">
               <el-input v-model={this.ruleForm.userName}></el-input>
+            </el-form-item>
+            <el-form-item label="Lastname" prop="verificationCode">
+              <el-input v-model={this.ruleForm.verificationCode}></el-input>
             </el-form-item>
             <el-form-item label="Phone number" prop="phoneNumber">
               <el-input v-model={this.ruleForm.phoneNumber}></el-input>
-              <Button>获取验证码</Button>
             </el-form-item>
-            <el-form-item label="短信动态码" prop="verificationCode">
-              <el-input v-model={this.ruleForm.verificationCode}></el-input>
-            </el-form-item>
-            <el-form-item label="Password" prop="password">
+            <el-form-item label="Email" prop="password">
               <el-input type="password" v-model={this.ruleForm.password} autocomplete="off"></el-input>
             </el-form-item>
-            <el-form-item label="Check password" prop="checkPass">
+            <el-form-item label="Check email" prop="checkPass">
               <el-input type="password" v-model={this.ruleForm.checkPass} autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item prop="checked">
