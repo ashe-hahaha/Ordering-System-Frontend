@@ -7,8 +7,8 @@ import { Component, Vue } from 'vue-property-decorator'
 import Logo from '@/components/logo/index'
 
 interface Form {
-  Password?: string;
-  SserName?: string;
+  password?: string;
+  userName?: string;
 }
 
 @Component({
@@ -69,7 +69,7 @@ export default class Login extends Vue {
     } catch (err) {
       this.$message({
         type: 'error',
-        message: err || 'Fail to login'
+        message: 'Fail to login'
       })
     }
   }
