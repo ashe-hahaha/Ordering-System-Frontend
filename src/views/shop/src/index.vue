@@ -22,65 +22,65 @@ export default class Shop extends Vue {
   foodVal: { appraisalTags?: string[]; appraisals?: UserApp[]; goodD?: GoodDetails } = {
     // 评价的排序标签
     appraisalTags: [
-      '味道赞(85)',
-      '性价比高(70)',
-      '菜品不错(50)',
-      '上菜快(70)',
-      '到店自提(70)',
-      '分量足(68)',
-      '回头客(44)',
-      '朋友聚餐(20)',
-      '价格实惠(7)'
+      'Tastes great(85)',
+      'Quality-price ratio(70)',
+      'The food is good(50)',
+      'Fast food(70)',
+      'Pick up in store(70)',
+      'Generous portion(68)',
+      'Repeat customer(44)',
+      'Friends get together(20)',
+      'Affordable(7)'
     ],
     appraisals: [
       {
-        id: '133',
-        name: 'haole',
+        id: '1000',
+        name: 'Tom',
         rating: 4.8,
         content:
-          '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-        time: '2021年2月21日',
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
         avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
         imgUrl: [
-          'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-          'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-          'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
         ]
       },
       {
-        id: '2333',
-        name: 'haole',
+        id: '1001',
+        name: 'Jacky',
         rating: 4.8,
         content:
-          '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-        time: '2021年2月21日',
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
         avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
         imgUrl: [
-          'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-          'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-          'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
         ]
       },
       {
-        id: '3333',
-        name: 'haole',
+        id: '1002',
+        name: 'Jason',
         rating: 4.8,
         content:
-          '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-        time: '2021年2月21日',
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
         avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
         imgUrl: [
-          'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-          'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-          'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
         ]
       }
     ],
     // 商品详情
     goodD: {
-      desc: '或许已经没有比一顿寿司更美味的食物了',
-      material: '大米',
-      taste: '微辣，中辣，特辣',
+      desc: 'Rice',
+      material: 'Rice',
+      taste: 'Common',
       priceDescription: '',
       monthlySale: 4071,
       favorableRate: 98,
@@ -92,59 +92,59 @@ export default class Shop extends Vue {
 
   // 评价的排序标签
   appraisalTags = [
-    '味道赞(85)',
-    '性价比高(70)',
-    '菜品不错(50)',
-    '上菜快(70)',
-    '到店自提(70)',
-    '分量足(68)',
-    '回头客(44)',
-    '朋友聚餐(20)',
-    '价格实惠(7)'
+  'Tastes great(85)',
+      'Quality-price ratio(70)',
+      'The food is good(50)',
+      'Fast food(70)',
+      'Pick up in store(70)',
+      'Generous portion(68)',
+      'Repeat customer(44)',
+      'Friends get together(20)',
+      'Affordable(7)'
   ]
   appraisals = [
-    {
-      id: '133',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    },
-    {
-      id: '2333',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    },
-    {
-      id: '3333',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    }
+  {
+        id: '1000',
+        name: 'Tom',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      },
+      {
+        id: '1001',
+        name: 'Jacky',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      },
+      {
+        id: '1002',
+        name: 'Jason',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      }
   ]
 
   shop: { shop?: Shops; food?: any[] } = {}
@@ -194,9 +194,9 @@ export default class Shop extends Vue {
         <food v-model={this.foodVal} show={this.visible} onHideView={(e: any) => (this.visible = e)}></food>
         <div class="shop">
           <el-breadcrumb class="shop-breadcrumb" separator-class="el-icon-arrow-right">
-            <el-breadcrumb-item to={{ name: 'Home' }}>首页</el-breadcrumb-item>
-            <el-breadcrumb-item to={{ name: 'shoplist' }}>店铺列表</el-breadcrumb-item>
-            <el-breadcrumb-item to={{ name: 'shop' }}>店铺详情</el-breadcrumb-item>
+            <el-breadcrumb-item to={{ name: 'Home' }}>Home</el-breadcrumb-item>
+            <el-breadcrumb-item to={{ name: 'shoplist' }}>Shop list</el-breadcrumb-item>
+            <el-breadcrumb-item to={{ name: 'shop' }}>Shop detail</el-breadcrumb-item>
           </el-breadcrumb>
           <div class="shop-header">
             <div class="shop-header-left">
@@ -205,30 +205,30 @@ export default class Shop extends Vue {
                 <div>
                   <star num={this.shop?.shop?.rating} size={'16'}></star>
                   <p>
-                    {this.shop?.shop?.rating}分人均￥{this.shop?.shop?.price}
+                    {this.shop?.shop?.rating}Per pax${this.shop?.shop?.price}
                   </p>
                 </div>
               </div>
               <div>
                 <p>
-                  地址：{this.shop?.shop?.address}
+                  location: {this.shop?.shop?.address}
                   <i class="el-icon-location-information"></i>
                 </p>
-                <p>电话：{this.shop?.shop?.phoneNumber}</p>
-                <p>营业时间：{this.shop?.shop?.business}</p>
+                <p>tel: {this.shop?.shop?.phoneNumber}</p>
+                <p>opening hours: {this.shop?.shop?.business}</p>
               </div>
               <div>
                 <ul>
                   {this.shop?.shop?.desc?.includes('wifi') && (
                     <li>
                       <img src="https://p0.meituan.net/codeman/551290739062eda37e52999e2315f50c1887.png" />
-                      <p>提供wifi</p>
+                      <p>wifi</p>
                     </li>
                   )}
                   {this.shop?.shop?.desc?.includes('stop') && (
                     <li>
                       <img src="https://p1.meituan.net/codeman/4b1c5696fe5bf2c4d23fb01659b3e68b1960.png" />
-                      <p>停车位</p>
+                      <p>Car park</p>
                     </li>
                   )}
                 </ul>
@@ -265,7 +265,7 @@ export default class Shop extends Vue {
                         </div>
                         <p class="shop-card-list-price">￥{item.price}</p>
                         <a class="none" onClick={(e: any) => this.addShoppingCart(item, e)}>
-                          加入购物车
+                          Add to shopcart
                         </a>
                         <el-button
                           onClick={(e: any) => this.addShoppingCart(item, e)}
@@ -273,7 +273,7 @@ export default class Shop extends Vue {
                           type="primary"
                           icon="el-icon-plus"
                           plain>
-                          加入购物车
+                          Add to shopcart
                         </el-button>
                       </li>
                     )
