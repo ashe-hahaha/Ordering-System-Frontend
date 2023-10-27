@@ -55,6 +55,7 @@ export default class Register extends Vue {
         if (status) {
           // const res: any = await userRegister(params)
           const res: any = await userRegister(this.ruleForm.userName, this.ruleForm.password, 'abc')
+          console.log(res)
           if (res.code == 1) {
             this.$message({
               showClose: true,
