@@ -20,7 +20,7 @@ export function userLogin(params = {}){
 // }
 /** 注册 */
 export function userRegister(userName='', password='', avatar='') {
-    const url = '/customers/signup/${userName}/${password}/${avatar}';
+    const url = `/customers/signup/${userName}/${password}/${avatar}`;
     return api.get(url);
 }
 
