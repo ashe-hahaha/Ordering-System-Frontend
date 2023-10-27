@@ -16,7 +16,7 @@ export function userLogin(params = {}){
 
 /** 注册 */
 export function userRegister(params = {}) {
-  return api.get('/customers/signup',params)
+  return api.post('/customers/signup',params)
 }
 // /** 注册 */
 // export function userRegister(userName='', password='', avatar='') {
