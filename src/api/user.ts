@@ -11,7 +11,7 @@ export function getUserAll() {
 
 /** 登录 */
 export function userLogin(params = {}){
-  return api.post('/user/login',params)
+  return api.post('/customers/signin',params)
 }
 
 /** 注册 */
