@@ -51,7 +51,7 @@ export default {
       method: httpMethods.DELETE,
       params: {
         ...params,
-        time: new Date().getTime()
+        // time: new Date().getTime()
       },
       url,
     })

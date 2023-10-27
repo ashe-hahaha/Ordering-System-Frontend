@@ -14,9 +14,13 @@ export function userLogin(params = {}){
   return api.post('/user/login',params)
 }
 
+// /** 注册 */
+// export function userRegister(params = {}) {
+//   return api.get('/customers/signup',params)
+// }
 /** 注册 */
-export function userRegister(params = {}) {
-  return api.get('/customers/signup',params)
+export function userRegister(userName={}, password={}, avatar={}) {
+  return api.get('/customers/signup',userName+'/'+password+'/'+avatar)
 }
 
 /** 修改用户信息 */
