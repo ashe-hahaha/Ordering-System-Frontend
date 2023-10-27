@@ -19,8 +19,9 @@ export function userLogin(params = {}){
 //   return api.get('/customers/signup',params)
 // }
 /** 注册 */
-export function userRegister(userName={}, password={}, avatar={}) {
-  return api.get('/customers/signup',userName+'/'+password+'/'+avatar)
+export function userRegister(userName='', password='', avatar='') {
+    const url = '/customers/signup/${userName}/${password}/${avatar}';
+    return api.get(url);
 }
 
 /** 修改用户信息 */
