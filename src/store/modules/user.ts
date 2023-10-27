@@ -64,9 +64,9 @@ export default {
         // [state.accessToken, state.userInfo] = [res.access_token, res.userInfo]
         // commit('setToken', res.data.access_token)
         // commit('setUserInfo', res.data.userInfo)
-        [state.accessToken, state.userInfo] = ['res.access_token', res.userInfo]
-        commit('setToken', 'res.data.access_token')
-        commit('setUserInfo', 'res.data.userInfo')
+        // [state.accessToken, state.userInfo] = ['res.access_token', res.userInfo]
+        // commit('setToken', 'res.data.access_token')
+        // commit('setUserInfo', 'res.data.userInfo')
         return Promise.resolve(res.message)
       } else {
         return Promise.reject(res.message)
