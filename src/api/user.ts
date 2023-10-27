@@ -16,7 +16,7 @@ export function userLogin(params = {}){
 
 /** 注册 */
 export function userRegister(params = {}) {
-  return api.post('/user/register',params)
+  return api.get('/customers/signup',params)
 }
 
 /** 修改用户信息 */

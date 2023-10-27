@@ -12,7 +12,8 @@ enum httpMethods {
 }
 
 const request = axios.create({
-  baseURL: '/api',
+  baseURL:'http://localhost:9003/',
+  // baseURL: '/customers',
   timeout: 2000
 });
 
@@ -34,7 +35,6 @@ export default {
       method: httpMethods.GET,
       params: {
         ...params,
-        time: new Date().getTime()
       },
       url,
     })

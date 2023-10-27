@@ -50,7 +50,7 @@ export default class Register extends Vue {
         const params: User = {
           userName: this.ruleForm.userName || '',
           userPass: this.ruleForm.password || '',
-          userAvatar: '//s0.meituan.net/bs/fe-web-meituan/e3064a3/img/head-img.png'
+          userAvatar: 'abc'
         }
         if (status) {
           const res: any = await userRegister(params)
