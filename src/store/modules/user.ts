@@ -62,8 +62,8 @@ export default {
       const res: any = await userLogin(user)
       if (res.code == 1) {
         [state.accessToken, state.userInfo] = [res.access_token, res.userInfo]
-        commit('setToken', res.data.access_token)
-        commit('setUserInfo', res.data.userInfo)
+        commit('setToken', res.access_token)
+        commit('setUserInfo', res.userInfo)
         // [state.accessToken, state.userInfo] = ['res.access_token', res.user]
         // commit('setToken', 'res.data.access_token')
         // commit('setUserInfo', 'res.data.userInfo')
