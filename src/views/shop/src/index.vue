@@ -171,6 +171,7 @@ export default class Shop extends Vue {
     try {
       const data = await getShop(this.shopId)
       this.shop = data.data
+      console.log(data.data)
     } catch (err) {
       console.log(err)
     }
