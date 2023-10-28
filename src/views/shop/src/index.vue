@@ -235,7 +235,8 @@ export default class Shop extends Vue {
     return (
       <div class="shop-wrapper">
         <eaten-header></eaten-header>
-        <food v-model={this.foodVal} show={this.visible} onHideView={(e: any) => (this.visible = e)}></food>
+        {/* <food v-model={this.foodVal} show={this.visible} onHideView={(e: any) => (this.visible = e)}></food> */}
+        <food v-model={this.foodVal} show={true} onHideView={(e: any) => (this.visible = e)}></food>
         <div class="shop">
           <el-breadcrumb class="shop-breadcrumb" separator-class="el-icon-arrow-right">
             <el-breadcrumb-item to={{ name: 'Home' }}>Home</el-breadcrumb-item>
