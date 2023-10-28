@@ -7,7 +7,7 @@ import api from './api'
 /** 获得类别列表 */
 export function getSortAll() {
   // return api.get('/sort/all')
-  return api.post2(`/api/restaurants`)
+  return api.get9002(`/api/restaurants`)
 }
 
 /** 食品详情 */

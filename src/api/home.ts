@@ -21,5 +21,5 @@ export function getShop(id = '') {
 // }
 /** 店铺列表 */
 export function getShopList() {
-  return api.post2(`/api/restaurants`)
+  return api.get9002(`/api/restaurants`)
 }
