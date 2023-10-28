@@ -171,9 +171,9 @@ export default class Shop extends Vue {
     try {
       const data = await getShop(this.shopId)
       // this.shop = data.data
-      this.shop.food = data.data.foodMenu;
-      console.log(this.shop.food)
+      
       this.shop = {
+        food: data.data.foodMenu,
         shop: {
           name: data.data.restaurantName,
           address: data.data.address.street + ', ' + data.data.address.city + ', ' + data.data.address.state,
@@ -193,8 +193,7 @@ export default class Shop extends Vue {
           // [propName: string]: any;
         }
       }
-
-      console.log(this.shop?.shop)
+    console.log(this.shop.food)
     } catch (err) {
       console.log(err)
     }
