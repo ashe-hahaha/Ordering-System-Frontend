@@ -36,7 +36,7 @@ export default class Star extends Vue {
         {this.getStar.map((item) => {
           return <span class={`star star${this.size} star${item}`}></span>
         })}
-        <span v-show={this.showText}>{this.num}分</span>
+        <span v-show={this.showText}>{this.num}points</span>
       </div>
     )
   }
