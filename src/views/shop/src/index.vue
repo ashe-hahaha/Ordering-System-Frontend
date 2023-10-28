@@ -171,11 +171,15 @@ export default class Shop extends Vue {
     try {
       const data = await getShop(this.shopId)
       // this.shop = data.data
+      this.shop.food = data.data.foodMenu;
       this.shop = {
         shop: {
           name: data.data.restaurantName,
           address: data.data.address.street + ', ' + data.data.address.city + ', ' + data.data.address.state,
-          food: data.data.foodMenu
+          food: data.data.foodMenu,
+          phoneNumber: data.data.phoneNumber,
+          business: data.data.business,
+          coverImg: data.data.coverImg
           // name?: string;
           // rating?: number;
           // price?: number;
@@ -198,8 +202,28 @@ export default class Shop extends Vue {
   async viewFood(item: any) {
     try {
       const data: any = await getFood(item.id)
+      // "foodMenu": [
+      //   {
+      //       "foodName": "sala",
+      //       "foodDescription": "haochi",
+      //       "foodCatalog": "india food",
+      //       "foodPrice": 22.0,
+      //       "id": 1
+      //   }
+
+      // export interface GoodDetails {
+      //   desc?: string;
+      //   material?: string;
+      //   taste?: string;
+      //   priceDescription?: string;
+      //   monthlySale?: string | number;
+      //   favorableRate?: string | number;
+      //   discount?: string | number;
+      //   price?: number;
+      //   packagingCosts: ?number;
+      // }
       this.$set(this.foodVal, 'goodD', { ...data.data })
-      // console.log(this.foodVal.goodD)
+      console.log(this.foodVal.goodD)
       this.visible = true
     } catch (err) {
       console.log(err)
@@ -278,11 +302,11 @@ export default class Shop extends Vue {
                       <li onClick={() => this.viewFood(item)} key={item.id}>
                         <img src={item.url} />
                         <div class="shop-card-list-text">
-                          <p class="shop-card-list-name">{item.name}</p>
+                          <p class="shop-card-list-name">{item.foodName}</p>
                           <p class="shop-card-list-desc">{item.desc}</p>
                           <p class="shop-card-list-sold">{item.sold}</p>
                         </div>
-                        <p class="shop-card-list-price">￥{item.price}</p>
+                        <p class="shop-card-list-price">￥{item.foodPrice}</p>
                         <a class="none" onClick={(e: any) => this.addShoppingCart(item, e)}>
                           Add to shopcart
                         </a>
