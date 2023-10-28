@@ -15,7 +15,11 @@ export function getShop(id = '') {
   return api.get(`/shop/${id}`)
 }
 
+// /** 店铺列表 */
+// export function getShopList(params = {}) {
+//   return api.post(`/shop/sort`,params)
+// }
 /** 店铺列表 */
-export function getShopList(params = {}) {
-  return api.post(`/shop/sort`,params)
+export function getShopList() {
+  return api.post2(`/api/restaurants`)
 }

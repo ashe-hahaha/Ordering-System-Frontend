@@ -37,7 +37,8 @@ export default class ShopList extends Vue {
     const typeIds = val.map((item: string) => {
       return this.idToType[item]
     })
-    getShopList({ typeIds: typeIds.join(',') }).then((res) => {
+    // getShopList({ typeIds: typeIds.join(',') }).then((res) => {
+    getShopList().then((res) => {
       this.shoplist = res.data.map((item: any) => {
         return {
           label: item.name,

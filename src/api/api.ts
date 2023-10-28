@@ -17,6 +17,11 @@ const request = axios.create({
   timeout: 2000
 });
 
+const request2 = axios.create({
+  baseURL:'http://localhost:9002/',
+  timeout: 2000
+});
+
 // 拦截器
 request.interceptors.response.use(
   res => {
@@ -41,6 +46,13 @@ export default {
   },
   post(url: string, params = {}) {
     return request({
+      method: httpMethods.POST,
+      data: params,
+      url,
+    })
+  },
+  post2(url: string, params = {}) {
+    return request2({
       method: httpMethods.POST,
       data: params,
       url,
