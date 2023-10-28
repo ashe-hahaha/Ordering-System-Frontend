@@ -12,7 +12,7 @@ export function getHome() {
 
 /** 店铺详情 */
 export function getShop(id = '') {
-  return api.get9002(`/restaurants/${id}`)
+  return api.get9002(`/api/restaurants/${id}`)
 }
 
 // /** 店铺列表 */
