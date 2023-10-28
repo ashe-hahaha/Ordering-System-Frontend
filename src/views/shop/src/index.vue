@@ -281,7 +281,7 @@ export default class Shop extends Vue {
               <div class="img-top">
                 <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} />
               </div>
-              <div>
+              {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {
                     return (
                       <el-image
@@ -290,7 +290,7 @@ export default class Shop extends Vue {
                         preview-src-list={this.shop?.shop?.coverImg}></el-image>
                     )
                   })}
-              </div>
+              </div> */}
             </div>
           </div>
           <el-tabs class="shop-card" type="border-card">
