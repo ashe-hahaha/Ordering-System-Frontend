@@ -12,66 +12,66 @@ import { Goods, UserApp } from './index'
 })
 export default class Appraisal extends Vue {
   // 评价的排序标签
-  appraisalTags: Array<string> = [
-    '味道赞(85)',
-    '性价比高(70)',
-    '菜品不错(50)',
-    '上菜快(70)',
-    '到店自提(70)',
-    '分量足(68)',
-    '回头客(44)',
-    '朋友聚餐(20)',
-    '价格实惠(7)'
+  appraisalTags = [
+  'Tastes great(85)',
+    'Quality-price ratio(70)',
+    'The food is good(50)',
+    'Fast food(70)',
+    'Pick up in store(70)',
+    'Generous portion(68)',
+    'Repeat customer(44)',
+    'Friends get together(20)',
+    'Affordable(7)'
   ]
-  appraisals: Array<UserApp> = [
-    {
-      id: '133',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    },
-    {
-      id: '2333',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    },
-    {
-      id: '3333',
-      name: 'haole',
-      rating: 4.8,
-      content:
-        '吃的很饱，寿司很好吃，海带丝也很好吃， 凑字数 孟子曰：天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，增益其所不能。太史公曰：古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大底圣贤发愤之所为作也。',
-      time: '2021年2月21日',
-      avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
-      imgUrl: [
-        'https://p0.meituan.net/shaitu/c1c9fcf5b6105e68aa3eab70ac27ef03884501.jpg',
-        'https://p0.meituan.net/shaitu/b47d954c79fb2ac797bb71226170d0995057150.jpg',
-        'https://p0.meituan.net/shaitu/bb45ac8e7fbf4016028030f42acb6c1e799653.jpg'
-      ]
-    }
+  appraisals = [
+  {
+        id: '1000',
+        name: 'Tom',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      },
+      {
+        id: '1001',
+        name: 'Jacky',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      },
+      {
+        id: '1002',
+        name: 'Jason',
+        rating: 4.8,
+        content:
+          'I recently visited [Restaurant Name] and had an amazing dining experience. The restaurant had a welcoming ambiance and the staff was friendly and attentive. The food was outstanding. Every dish was prepared with great attention to detail and the flavors were exceptional. The menu offered a diverse range of options, catering to various preferences.The service was top-notch. The staff was knowledgeable about the menu, and their recommendations were spot-on. They ensured that we had everything we needed throughout the meal.Overall, I highly recommend [Restaurant Name]. It\'s a must-visit for anyone looking for a memorable dining experience.',
+        time: '2023.10.10',
+        avatar: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        imgUrl: [
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif',
+          'http://www.canyin168.com/UploadFiles/Article/2018/6/201806251026586061.gif'
+        ]
+      }
   ]
 
   protected render() {
     return (
       <div class="shop-card-appraisal">
-        <h2 class="shop-card-appraisal-total">2158条网友点评</h2>
+        <h2 class="shop-card-appraisal-total">111 reviews</h2>
         <ul class="shop-card-appraisal-tag">
           {this.appraisalTags.map((item) => {
             return <li>{item}</li>
@@ -104,7 +104,7 @@ export default class Appraisal extends Vue {
                   <div class="like">
                     <el-checkbox text-color="">
                       <span>
-                        <i class="el-icon-thumb"></i>点赞
+                        <i class="el-icon-thumb"></i>Like
                       </span>
                     </el-checkbox>
                   </div>
