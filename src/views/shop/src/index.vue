@@ -172,6 +172,7 @@ export default class Shop extends Vue {
       const data = await getShop(this.shopId)
       // this.shop = data.data
       this.shop.food = data.data.foodMenu;
+      console.log(this.shop.food)
       this.shop = {
         shop: {
           name: data.data.restaurantName,
@@ -222,7 +223,7 @@ export default class Shop extends Vue {
       //   price?: number;
       //   packagingCosts: ?number;
       // }
-      this.$set(this.foodVal, 'goodD', { ...data.data })
+      this.$set(this.foodVal, 'goodD', { ...data.data.food })
       console.log(this.foodVal.goodD)
       this.visible = true
     } catch (err) {
@@ -279,7 +280,8 @@ export default class Shop extends Vue {
             </div>
             <div class="shop-header-right none-600">
               <div class="img-top">
-                <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} />
+                {/* <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} /> */}
+                <img src={this.shop?.shop?.coverImg} />
               </div>
               {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {
