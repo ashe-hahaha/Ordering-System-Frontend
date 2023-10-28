@@ -10,15 +10,10 @@ export function getSortAll() {
   return api.get9002(`/api/restaurants`)
 }
 
-// /** 食品详情 */
-// export function getFood(id = '') {
-//   return api.get9002(`/api/restaurant/${id}/menu`)
-// }
 /** 食品详情 */
-export function showMenuByRestaurantId(id = '') {
+export function getFood(id = '') {
   return api.get9002(`/api/restaurant/${id}/menu`)
 }
-
 
 /** 搜索 */
 export function getFoodByName(params = {}) {
