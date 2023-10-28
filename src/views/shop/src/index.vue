@@ -194,6 +194,7 @@ export default class Shop extends Vue {
         }
       }
     console.log(this.shop.food)
+    console.log(this.shop.shop)
     } catch (err) {
       console.log(err)
     }
