@@ -12,7 +12,7 @@ import Food from '@/views/food'
 import { Goods, UserApp, GoodDetails, Shops } from './index'
 import storage from '@/storage'
 import { getShop } from '@/api/home'
-import { getFood } from '@/api/all'
+import { showMenuByRestaurantId } from '@/api/all'
 
 @Component({
   components: { EatenHeader, EatenFooter, Star, Food, Appraisal }
@@ -178,7 +178,7 @@ export default class Shop extends Vue {
 
   async viewFood(item: any) {
     try {
-      const data: any = await getFood(item.id)
+      const data: any = await showMenuByRestaurantId(item.id)
       this.$set(this.foodVal, 'goodD', { ...data.data })
       // console.log(this.foodVal.goodD)
       this.visible = true

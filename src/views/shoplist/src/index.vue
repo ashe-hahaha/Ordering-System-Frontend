@@ -39,12 +39,12 @@ export default class ShopList extends Vue {
     })
     // getShopList({ typeIds: typeIds.join(',') }).then((res) => {
     getShopList().then((res) => {
-      console.log(res.data)
       this.shoplist = res.data.map((item: any) => {
         const mergedAddress = item.address.street + ', ' + item.address.city + ', ' + item.address.state;
         return {
           label: item.restaurantName,
           desc: mergedAddress,
+          percapita: item.foodMenu.foodPrice,
           ...item
         }
       })
