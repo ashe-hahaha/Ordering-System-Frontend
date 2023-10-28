@@ -170,7 +170,43 @@ export default class Shop extends Vue {
     }
     try {
       const data = await getShop(this.shopId)
-      this.shop = data.data
+      // this.shop = data.data
+      if (this.shop.shop){
+        this.shop.shop.name = data.data.restaurantName
+        const mergedAddress = data.data.address.street + ', ' + data.data.address.city + ', ' + data.data.address.state;
+        this.shop.shop.address = mergedAddress
+        this.shop.shop.food = data.data.foodMenu
+      }
+      // "restaurantName": "Delicious Garden",
+      // "restaurantCatalog": "Chinese Cuisine",
+      // "foodMenu": [
+      //     {
+      //         "foodName": "sala",
+      //         "foodDescription": "haochi",
+      //         "foodCatalog": "india food",
+      //         "foodPrice": 22.0,
+      //         "id": 1
+      //     }
+      // ],
+      // "address": {
+      //     "street": "123 Main Street",
+      //     "city": "City",
+      //     "state": "State",
+      //     "zip": null,
+      //     "country": null
+      // },
+      // "id": 1
+
+      // name?: string;
+      // rating?: number;
+      // price?: number;
+      // address?: string;
+      // phoneNumber?: string;
+      // business?: string;
+      // desc?: string[];
+      // coverImg?: string[];
+      // food?: any[];
+      // [propName: string]: any;
       console.log(this.shop)
     } catch (err) {
       console.log(err)
