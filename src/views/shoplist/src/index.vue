@@ -39,10 +39,11 @@ export default class ShopList extends Vue {
     })
     // getShopList({ typeIds: typeIds.join(',') }).then((res) => {
     getShopList().then((res) => {
+      console.log(res.data)
       this.shoplist = res.data.map((item: any) => {
         return {
           label: item.name,
-          desc: item.address,
+          desc: item.address.street,
           ...item
         }
       })
