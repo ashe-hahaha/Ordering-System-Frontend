@@ -297,7 +297,7 @@ export default class Shop extends Vue {
             </div>
           </div>
           <el-tabs class="shop-card" type="border-card">
-            <el-tab-pane label="点餐">
+            <el-tab-pane label="Menu">
               <ul class="shop-card-list">
                 {this.shop.food &&
                   this.shop.food.map((item: any) => {
@@ -309,7 +309,7 @@ export default class Shop extends Vue {
                           <p class="shop-card-list-desc">{item.desc}</p>
                           <p class="shop-card-list-sold">{item.sold}</p>
                         </div>
-                        <p class="shop-card-list-price">￥{item.foodPrice}</p>
+                        <p class="shop-card-list-price">${item.foodPrice}</p>
                         <a class="none" onClick={(e: any) => this.addShoppingCart(item, e)}>
                           Add to shopcart
                         </a>
@@ -326,7 +326,7 @@ export default class Shop extends Vue {
                   })}
               </ul>
             </el-tab-pane>
-            <el-tab-pane class="shop-card-appraisal" label="评价">
+            <el-tab-pane class="shop-card-appraisal" label="Review">
               <Appraisal></Appraisal>
             </el-tab-pane>
           </el-tabs>
