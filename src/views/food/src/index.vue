@@ -77,11 +77,11 @@ export default class Food extends Vue {
             <span>Sell in a month {this.foodVal.goodD.monthlySale}</span>
             <span>favorable evaluation rate {this.foodVal.goodD.favorableRate}%</span>
           </div>
-          <div>{this.foodVal.goodD.discount != 1 ? (this.foodVal.goodD.discount * 10).toFixed(1) : '0.99'}折</div>
+          <div>{this.foodVal.goodD.discount != 1 ? (this.foodVal.goodD.discount * 100).toFixed(1) : '0.99'}%</div>
           <div>
             <span class="pri">{(this.foodVal.goodD.price * this.foodVal.goodD.discount).toFixed(1)}</span>
-            <span class="del">￥{this.foodVal.goodD.price}</span>
-            <span class="other">Package fee${this.foodVal.goodD.packagingCosts}/份</span>
+            <span class="del">${this.foodVal.goodD.price}</span>
+            <span class="other">Package fee${this.foodVal.goodD.packagingCosts}/</span>
             <el-button type="primary" size="small" icon="el-icon-plus" onClick={this.shopping} round>
               Add to shoplist
             </el-button>
