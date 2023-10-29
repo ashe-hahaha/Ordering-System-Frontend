@@ -81,7 +81,7 @@ export default class Food extends Vue {
           <div>
             <span class="pri">{(this.foodVal.goodD.price * this.foodVal.goodD.discount).toFixed(1)}</span>
             <span class="del">${this.foodVal.goodD.price}</span>
-            <span class="other">Package fee${this.foodVal.goodD.packagingCosts}/</span>
+            <span class="other">Package fee${this.foodVal.goodD.packagingCosts}</span>
             <el-button type="primary" size="small" icon="el-icon-plus" onClick={this.shopping} round>
               Add to shoplist
             </el-button>
