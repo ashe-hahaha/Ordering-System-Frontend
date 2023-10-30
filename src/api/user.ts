@@ -26,7 +26,7 @@ export function userRegister(params = {}) {
 
 /** 修改用户信息 */
 export function userEdit(params = {}) {
-  return api.post(`/customers/update`,params)
+  return api.put(`/customers/update`,params)
 }
 // /** 修改用户信息 */
 // export function userEdit(id = '',params = {}) {
