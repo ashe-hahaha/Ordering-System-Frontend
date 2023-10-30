@@ -17,6 +17,11 @@ const request = axios.create({
   timeout: 2000
 });
 
+const request9001 = axios.create({
+  baseURL:'http://localhost:9001/',
+  timeout: 2000
+});
+
 const request9002 = axios.create({
   baseURL:'http://localhost:9002/',
   timeout: 2000
@@ -44,6 +49,15 @@ export default {
       url,
     })
   },
+  get9001(url: string, params = {}) {
+    return request9001({
+      method: httpMethods.GET,
+      params: {
+        ...params,
+      },
+      url,
+    })
+  },
   get9002(url: string, params = {}) {
     return request9002({
       method: httpMethods.GET,
@@ -55,6 +69,13 @@ export default {
   },
   post(url: string, params = {}) {
     return request({
+      method: httpMethods.POST,
+      data: params,
+      url,
+    })
+  },
+  post9001(url: string, params = {}) {
+    return request9001({
       method: httpMethods.POST,
       data: params,
       url,
