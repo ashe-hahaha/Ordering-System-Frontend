@@ -28,8 +28,8 @@ export default class UserInfo extends Vue {
   ]
 
   beforeCreate() {
-    // if (!this.$store.getters.loginStatus) {
-    if (this.$store.getters.loginStatus) {
+    if (!this.$store.getters.loginStatus) {
+    // if (this.$store.getters.loginStatus) {
       this.$alert('Please login first', 'Hint', {
         confirmButtonText: 'Confirm',
         type: 'warning'

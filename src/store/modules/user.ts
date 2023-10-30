@@ -23,6 +23,7 @@ export default {
     accessToken: ''
   },
   getters: {
+    user: state => state.userInfo,
     userName: state => state.userInfo.userName,
     userLevel: state => state.userInfo.userLevel,
     userAddress: state => state.userInfo.userAddress,
@@ -61,8 +62,8 @@ export default {
     async Login({ commit, state }, user: User) {
       const res: any = await userLogin(user)
       if (res.code == 1) {
-        [state.accessToken, state.userInfo] = [res.access_token, res.user]
-        commit('setToken', res.access_token)
+        [state.accessToken, state.userInfo] = ['default', res.user]
+        commit('setToken', 'default')
         commit('setUserInfo', res.user)
         return Promise.resolve(res.message)
       } else {

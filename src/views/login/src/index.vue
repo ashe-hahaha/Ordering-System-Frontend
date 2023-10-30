@@ -55,8 +55,10 @@ export default class Login extends Vue {
                 type: 'success',
                 message: msg
               })
-              this.$router.push({ name: 'Home' })
-              this.$router.go(0)
+              console.log(this.$store.getters.user)
+              console.log(this.$store.getters.userName)
+              // this.$router.push({ name: 'Home' })
+              // this.$router.go(0)
             })
             .catch((err) => {
               this.$message({

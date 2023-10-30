@@ -27,7 +27,6 @@ export default class Account extends Vue {
   }
 
   init() {
-    console.log(this.$store.getters.user)
     this.name = this.$store.getters.userName
     this.address = this.$store.getters.userAddress
     this.phoneNumber = this.$store.getters.userPhone
@@ -41,8 +40,8 @@ export default class Account extends Vue {
       userPass: this.password,
       userAddress: this.address,
       userPhone: this.phoneNumber,
-      id: this.$store.getters.userId,
-
+      id: this.$store.getters.Id,
+      
       _id: '',
       userLevel: 0,
       userAvatar: ''
