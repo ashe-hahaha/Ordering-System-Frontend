@@ -39,7 +39,19 @@ export default class Account extends Vue {
       userPass: this.password,
       userAddress: this.address,
       userPhone: this.phoneNumber,
-      id: this.$store.getters.userId
+      id: this.$store.getters.userId,
+
+      _id: '',
+      userLevel: 0,
+      userAvatar: ''
+      // private String _id;
+      // private String id;
+      // private String userName;
+      // private String userPass;
+      // private Integer userLevel;
+      // private String userAddress;
+      // private String userPhone;
+      // private String userAvatar;
     }
     userEdit(userInfo).then(() => {
       this.$store
