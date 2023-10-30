@@ -38,9 +38,10 @@ export default class Account extends Vue {
       userName: this.name,
       userPass: this.password,
       userAddress: this.address,
-      userPhone: this.phoneNumber
+      userPhone: this.phoneNumber,
+      id: this.$store.getters.userId
     }
-    userEdit(this.$store.getters.userId, userInfo).then(() => {
+    userEdit(userInfo).then(() => {
       this.$store
         .dispatch('Login', {
           userName: this.name,

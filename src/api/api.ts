@@ -17,13 +17,13 @@ const request = axios.create({
   timeout: 2000
 });
 
-const request9001 = axios.create({
-  baseURL:'http://localhost:9001/',
+const request9002 = axios.create({
+  baseURL:'http://localhost:9002/',
   timeout: 2000
 });
 
-const request9002 = axios.create({
-  baseURL:'http://localhost:9002/',
+const request9001 = axios.create({
+  baseURL:'http://localhost:9001/',
   timeout: 2000
 });
 
