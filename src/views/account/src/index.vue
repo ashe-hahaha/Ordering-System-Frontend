@@ -76,7 +76,7 @@ export default class Account extends Vue {
   // 修改用户名
   editName() {
     this.$set(this.edit, 1, !this.edit[1])
-    if (!this.edit[1]) {
+    if (this.edit[1]) {
       this.refreshUserInfo()
     }
   }
