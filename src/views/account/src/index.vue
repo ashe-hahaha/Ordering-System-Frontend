@@ -27,6 +27,7 @@ export default class Account extends Vue {
   }
 
   init() {
+    console.log(this.$store.getters.user)
     this.name = this.$store.getters.userName
     this.address = this.$store.getters.userAddress
     this.phoneNumber = this.$store.getters.userPhone
