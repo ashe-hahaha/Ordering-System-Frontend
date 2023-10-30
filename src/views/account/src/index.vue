@@ -68,7 +68,7 @@ export default class Account extends Vue {
   // 修改头像
   editAvatar() {
     this.$set(this.edit, 0, !this.edit[0])
-    if (!this.edit[0]) {
+    if (this.edit[0]) {
       console.log('submit')
     }
   }
@@ -84,7 +84,7 @@ export default class Account extends Vue {
   // 修改地址
   editAddress() {
     this.$set(this.edit, 2, !this.edit[2])
-    if (!this.edit[2]) {
+    if (this.edit[2]) {
       this.refreshUserInfo()
     }
   }
@@ -92,7 +92,7 @@ export default class Account extends Vue {
   // 修改电话
   editPhoneNumber() {
     this.$set(this.edit, 3, !this.edit[3])
-    if (!this.edit[3]) {
+    if (this.edit[3]) {
       this.refreshUserInfo()
     }
   }
@@ -100,7 +100,7 @@ export default class Account extends Vue {
   // 修改密码
   editPassword() {
     this.$set(this.edit, 4, !this.edit[4])
-    if (!this.edit[4]) {
+    if (this.edit[4]) {
       this.refreshUserInfo()
     }
   }
