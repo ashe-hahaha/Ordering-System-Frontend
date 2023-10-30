@@ -55,6 +55,7 @@ export default class Account extends Vue {
       // private String userAvatar;
     }
     console.log(userInfo)
+    userEdit(userInfo)
     // userEdit(userInfo).then(() => {
     //   this.$store
     //     .dispatch('Login', {
