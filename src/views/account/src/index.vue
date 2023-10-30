@@ -45,27 +45,17 @@ export default class Account extends Vue {
       _id: '',
       userLevel: 0,
       userAvatar: ''
-      // private String _id;
-      // private String id;
-      // private String userName;
-      // private String userPass;
-      // private Integer userLevel;
-      // private String userAddress;
-      // private String userPhone;
-      // private String userAvatar;
     }
-    console.log(userInfo)
-    userEdit(userInfo)
-    // userEdit(userInfo).then(() => {
-    //   this.$store
-    //     .dispatch('Login', {
-    //       userName: this.name,
-    //       userPass: this.password
-    //     })
-    //     .then((msg) => {
-    //       this.$router.go(0)
-    //     })
-    // })
+    userEdit(userInfo).then(() => {
+      this.$store
+        .dispatch('Login', {
+          userName: this.name,
+          userPass: this.password
+        })
+        .then((msg) => {
+          this.$router.go(0)
+        })
+    })
   }
 
   // 修改头像
