@@ -62,8 +62,8 @@ export default {
     async Login({ commit, state }, user: User) {
       const res: any = await userLogin(user)
       if (res.code == 1) {
-        [state.accessToken, state.userInfo] = ['default', res.user]
-        commit('setToken', 'default')
+        [state.accessToken, state.userInfo] = [res.access_token, res.user]
+        commit('setToken', res.access_token)
         commit('setUserInfo', res.user)
         return Promise.resolve(res.message)
       } else {
