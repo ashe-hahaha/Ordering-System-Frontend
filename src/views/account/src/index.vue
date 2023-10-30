@@ -54,16 +54,17 @@ export default class Account extends Vue {
       // private String userPhone;
       // private String userAvatar;
     }
-    userEdit(userInfo).then(() => {
-      this.$store
-        .dispatch('Login', {
-          userName: this.name,
-          userPass: this.password
-        })
-        .then((msg) => {
-          this.$router.go(0)
-        })
-    })
+    console.log(userInfo)
+    // userEdit(userInfo).then(() => {
+    //   this.$store
+    //     .dispatch('Login', {
+    //       userName: this.name,
+    //       userPass: this.password
+    //     })
+    //     .then((msg) => {
+    //       this.$router.go(0)
+    //     })
+    // })
   }
 
   // 修改头像
@@ -94,7 +95,6 @@ export default class Account extends Vue {
   editPhoneNumber() {
     this.$set(this.edit, 3, !this.edit[3])
     if (!this.edit[3]) {
-      console.log(UserInfo)
       this.refreshUserInfo()
     }
   }
