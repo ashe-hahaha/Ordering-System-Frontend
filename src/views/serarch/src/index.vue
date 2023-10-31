@@ -27,7 +27,7 @@ export default class SearchFood extends Vue {
       e.returnValue = 'stop'
       return stop
     }
-    getFoodByName({ name: this.$route.params.keywords || '' }).then((data) => {
+    getFoodByName(this.$route.params.keywords || '' ).then((data) => {
       this.shopList = data.data.map((item: any) => {
         return {
           imgUrl: item.url,
@@ -36,7 +36,7 @@ export default class SearchFood extends Vue {
       })
     })
     this.$EventBus.$on('searchFood', (keywords: string) => {
-      getFoodByName({ name: keywords || '' }).then((data) => {
+      getFoodByName(keywords || '' ).then((data) => {
         console.log(data)
         this.shopList = data.data.map((item: any) => {
           return {

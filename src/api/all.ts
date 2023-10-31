@@ -15,8 +15,8 @@ export function getFood(id = '') {
 }
 
 /** 搜索 */
-export function getFoodByName(params = {}) {
-  return api.get(`/food/serarchNm`, params)
+export function getFoodByName(str = '') {
+  return api.get9002(`/api/search/Golden`, str)
 }
 
 /** 订单 */
