@@ -71,7 +71,7 @@ export default class ShoppingCart extends Vue {
             name: shoppingRecord.foodName,
             number: shoppingRecord.quantity,
             price: shoppingRecord.foodPrice,
-            foodid: shoppingRecord.fooditem_id,
+            foodid: shoppingRecord.foodItemId,
           }
         })
       } else {
@@ -151,6 +151,7 @@ export default class ShoppingCart extends Vue {
     this.data.forEach((item, index) => {
       if (this.foodCheckbox[index]) {
         price += Number(item.price) * Number(item.number)
+        console.log(price)
       }
     })
     return price
