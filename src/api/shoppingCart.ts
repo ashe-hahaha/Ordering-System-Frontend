@@ -16,21 +16,21 @@ export function getSpt(id = '') {
 
 /** 添加 */
 export function addFood(foodId = '', userId='', quantity=1) {
-  return api.post9001(`api/orders/${foodId}/${userId}/${quantity}`)
+  return api.get9001(`api/orders/${foodId}/${userId}/${quantity}`)
 }
 
 /** 清空 */
 export function clearAll(id = '') {
-  return api.post9001(`/shoppingcart/clear/${id}`,)
+  return api.get9001(`/shoppingcart/clear/${id}`,)
 }
 
 /** 移除 */
 export function removeFood(params = {}) {
-  return api.post9001(`/shoppingcart/remove`, params)
+  return api.get9001(`/shoppingcart/remove`, params)
 }
 
 /** 结算 */
 export function submitCart(params = {}) {
-  return api.post9001(`/shoppingcart/submit`, params)
+  return api.get9001(`/shoppingcart/submit`, params)
 }
 
