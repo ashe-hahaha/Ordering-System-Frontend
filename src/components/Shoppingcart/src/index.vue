@@ -71,6 +71,7 @@ export default class ShoppingCart extends Vue {
             name: shoppingRecord.foodName,
             number: shoppingRecord.quantity,
             price: shoppingRecord.foodPrice,
+            foodid: shoppingRecord.fooditem_id,
           }
         })
       } else {
@@ -124,11 +125,9 @@ export default class ShoppingCart extends Vue {
 
   clearFood(row: any, e: any) {
     e.stopPropagation()
-    const params = {
-      foodId: row.id,
-      userId: this.userId
-    }
-    removeFood(params).then(() => {
+    console.log(row)
+    console.log(this.userId)
+    removeFood(row, this.userId).then(() => {
       this.hideDialog()
     })
   }
@@ -183,7 +182,7 @@ export default class ShoppingCart extends Vue {
                   <el-checkbox size="medium" v-model={this.foodCheckbox[index]}></el-checkbox>
                   <img src={item.img} />
                   <div class="food-list-right">
-                    <i class="el-icon-delete top" onClick={(e: any) => this.clearFood(item, e)}></i>
+                    <i class="el-icon-delete top" onClick={(e: any) => this.clearFood(item.foodid, e)}></i>
                     <div class="label">
                       <span>{item.name}</span>
                       <span>${item.price}</span>

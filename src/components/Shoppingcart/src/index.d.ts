@@ -10,4 +10,5 @@ export interface ShoppingCartConifg {
   desc?: string;
   number?: number;
   price?: number;
+  foodid?: string;
 }

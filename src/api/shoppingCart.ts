@@ -25,8 +25,8 @@ export function clearAll(id = '') {
 }
 
 /** 移除 */
-export function removeFood(params = {}) {
-  return api.get9001(`/shoppingcart/remove`, params)
+export function removeFood(foodItemId = '', userId='') {
+  return api.get9001(`/api/orders/deleteOne/${foodItemId}/${userId}`)
 }
 
 /** 结算 */
