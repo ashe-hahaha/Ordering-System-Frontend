@@ -18,6 +18,11 @@ import { getFood } from '@/api/all'
   components: { EatenHeader, EatenFooter, Star, Food, Appraisal }
 })
 export default class Shop extends Vue {
+  data(){
+    return {
+      imgsrc: require('@/assets/images/delicious1.jpg')
+    }
+  }
   [x: string]: any
   foodVal: { appraisalTags?: string[]; appraisals?: UserApp[]; goodD?: GoodDetails } = {
     // 评价的排序标签
@@ -285,8 +290,7 @@ export default class Shop extends Vue {
                 {/* <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} /> */}
                 {/* <img :src="require(this.shop?.shop?.coverImg)" alt=""> */}
                 {/* <img src="./assets/images/delicious3.jpg" alt=""></img> */}
-                <img src="/0001(1).png"></img>
-                <div style="background-image: url('0001(1).png');"></div>
+                {/* <img width="100%" height="100%" :src="imgsrc" /> */}
               </div>
               {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {

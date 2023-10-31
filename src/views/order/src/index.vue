@@ -36,10 +36,56 @@ export default class Order extends Vue {
 
   async init() {
     const data = await getOrder(this.$store.getters.userId || '')
-    this.orderData = {
-      ...data.data
-    }
+    // this.orderData = {
+    //   ...data.data
+    // }
+    data.data.forEach((orders: any) => {
+      orders.forEach((order: any) => {
+        switch (order.orderStatus) {
+          case "Processing":
+            if (!this.orderData.firest){
+              this.orderData = {
+                firest: []
+              }
+            }
+            if (this.orderData.firest){
+              this.orderData.firest.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 1
+              })
+            }
+            break;
+          // case "Paid":
+          //   orderData.second.push({
+          //     label: order.restaurantName,
+          //     desc: order.orderStatus,
+          //     num: order.id,
+          //     date: order.orderTime || '', // 假设日期字段是 orderTime
+          //     price: order.totalPrice,
+          //     url: '', // 添加图片 URL
+          //     type: 2 // 用于标识第二组订单
+          //   });
+          //   break;
+          // // 其他状态的订单类似处理
+        }
+      });
+    });
+  console.log(this.orderData)
+
   }
+  // "userName": 1,
+  // "restaurantId": 1,
+  // "restaurantName": "chinese food",
+  // "orderTime": null,
+  // "orderStatus": "Processing",
+  // "totalPrice": 22.0,
+  // "foodItem": [],
+  // "id": 1
 
   protected render() {
     return (
