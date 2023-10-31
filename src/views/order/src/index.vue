@@ -42,7 +42,26 @@ export default class Order extends Vue {
     data.data.forEach((orders: any) => {
       orders.forEach((order: any) => {
         switch (order.orderStatus) {
+          // Processing, Paid, Finished
+
           case "Processing":
+            if (!this.orderData.second){
+              this.orderData = {
+                second: []
+              }
+            }
+            if (this.orderData.second){
+              this.orderData.second.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 2
+              });
+            }
+
             if (!this.orderData.firest){
               this.orderData = {
                 firest: []
@@ -57,21 +76,80 @@ export default class Order extends Vue {
                 price: order.totalPrice,
                 url: '',
                 type: 1
-              })
+              });
             }
             break;
-          // case "Paid":
-          //   orderData.second.push({
-          //     label: order.restaurantName,
-          //     desc: order.orderStatus,
-          //     num: order.id,
-          //     date: order.orderTime || '', // 假设日期字段是 orderTime
-          //     price: order.totalPrice,
-          //     url: '', // 添加图片 URL
-          //     type: 2 // 用于标识第二组订单
-          //   });
-          //   break;
-          // // 其他状态的订单类似处理
+            
+          case "Paid":
+            if (!this.orderData.third){
+              this.orderData = {
+                third: []
+              }
+            }
+            if (this.orderData.third){
+              this.orderData.third.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 3
+              });
+            }
+            if (!this.orderData.firest){
+              this.orderData = {
+                firest: []
+              }
+            }
+            if (this.orderData.firest){
+              this.orderData.firest.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 1
+              });
+            }
+            break;
+          
+          case "Finished":
+            if (!this.orderData.fourth){
+              this.orderData = {
+                fourth: []
+              }
+            }
+            if (this.orderData.fourth){
+              this.orderData.fourth.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 4
+              });
+            }
+            if (!this.orderData.firest){
+              this.orderData = {
+                firest: []
+              }
+            }
+            if (this.orderData.firest){
+              this.orderData.firest.push({
+                label: order.restaurantName,
+                desc: order.orderStatus,
+                num: order.id,
+                date: order.orderTime || '',
+                price: order.totalPrice,
+                url: '',
+                type: 1
+              });
+            }
+            break;
+
         }
       });
     });
