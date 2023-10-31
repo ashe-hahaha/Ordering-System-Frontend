@@ -18,20 +18,11 @@ export function userLogin(params = {}){
 export function userRegister(params = {}) {
   return api.post('/customers/signup',params)
 }
-// /** 注册 */
-// export function userRegister(userName='', password='', avatar='') {
-//     const url = `/customers/signup/${userName}/${password}/${avatar}`;
-//     return api.get(url);
-// }
 
 /** 修改用户信息 */
 export function userEdit(params = {}) {
   return api.put(`/customers/update`,params)
 }
-// /** 修改用户信息 */
-// export function userEdit(id = '',params = {}) {
-//   return api.post(`/user/edit/${id}`,params)
-// }
 
 /** 根据token拿到userInfo */
 export function refreshUser(params = {}) {

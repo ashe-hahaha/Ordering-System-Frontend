@@ -96,7 +96,6 @@ export default class ShoppingCart extends Vue {
     //   quantity:1
     // }
     const userId = this.userId
-    console.log(foodId,userId)
     addFood(foodId,userId,1)
       .then((res) => {
         this.$message({
