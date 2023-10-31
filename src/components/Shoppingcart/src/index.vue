@@ -7,6 +7,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 import { ShoppingCartConifg } from './index'
 import storage from '@/storage'
 import { getSpt, addFood, removeFood, clearAll, submitCart } from '@/api/shoppingCart'
+import Food from '@/views/food/src/index.vue'
 
 @Component({
   components: {}
@@ -64,9 +65,15 @@ export default class ShoppingCart extends Vue {
     try {
       if (this.userId) {
         const data = await getSpt(this.userId)
-        // this.data = {
-        //   id: data.Id
-        // }
+        this.data = data.data.map((shoppingRecord: any) => {
+          return{
+            id: shoppingRecord.user_id,
+            name: shoppingRecord.foodName,
+            number: shoppingRecord.quantity,
+            price: shoppingRecord.foodPrice,
+          }
+        })
+        console.log(this.data)
         // {
         //   id?: string;
         //   name?: string;
@@ -76,17 +83,15 @@ export default class ShoppingCart extends Vue {
         //   price?: number;
         // }
         // {
-        //   "Id": 1,
+        //   "id": 1,
         //   "foodMenuID": 2,
         //   "foodName": "Example Food",
         //   "foodPrice": 10.99,
         //   "quantity": 5,
         //   "user_id": "exampleUser"
         // }
-        console.log(data)
         console.log(data.data)
-        console.log(data.data.content)
-        this.data = data.data.content
+        // this.data = data.data
       } else {
         this.data = []
       }
