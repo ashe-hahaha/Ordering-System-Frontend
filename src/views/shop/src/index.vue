@@ -283,7 +283,8 @@ export default class Shop extends Vue {
             <div class="shop-header-right none-600">
               <div class="img-top">
                 {/* <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} /> */}
-                <img src={this.shop?.shop?.coverImg} />
+                {/* <img src={this.shop?.shop?.coverImg} /> */}
+                <img src="src/assets/images/delicious3.jpg"></img>
               </div>
               {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {
@@ -304,7 +305,7 @@ export default class Shop extends Vue {
                   this.shop.food.map((item: any) => {
                     return (
                       <li onClick={() => this.viewFood(item)} key={item.id}>
-                        <img src={item.url} />
+                        <img src={item.coverImg} />
                         <div class="shop-card-list-text">
                           <p class="shop-card-list-name">{item.foodName}</p>
                           <p class="shop-card-list-desc">{item.desc}</p>
