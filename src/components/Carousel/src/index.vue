@@ -39,13 +39,14 @@ export default class Carousel extends Vue {
   foodTypeList: Array<FoodType> = []
 
   async mounted() {
-    // const content = await getSortAll()
-    // this.foodTypeList = content.data
-    this.foodTypeList = [
-      { id: '1', label: 'Category A', icon: 'icon-a', color: 'blue' },
-      { id: '2', label: 'Category B', icon: 'icon-b', color: 'green' },
-      { id: '3', label: 'Category C', icon: 'icon-c', color: 'red' }
-    ];
+    const content = await getSortAll()
+    this.foodTypeList = content.data
+    console.log(content.data)
+    // this.foodTypeList = [
+    //   { id: '1', label: 'Category A', icon: 'icon-a', color: 'blue' },
+    //   { id: '2', label: 'Category B', icon: 'icon-b', color: 'green' },
+    //   { id: '3', label: 'Category C', icon: 'icon-c', color: 'red' }
+    // ];
   }
 
   protected render() {
