@@ -40,8 +40,9 @@ export default class Carousel extends Vue {
 
   async mounted() {
     const content = await getSortAll()
-    this.foodTypeList = content.data
-    console.log(content.data)
+    this.foodTypeList = content.data.map((shop: any) => {
+      return shop.restaurantCatalog
+    })
     // this.foodTypeList = [
     //   { id: '1', label: 'Category A', icon: 'icon-a', color: 'blue' },
     //   { id: '2', label: 'Category B', icon: 'icon-b', color: 'green' },
