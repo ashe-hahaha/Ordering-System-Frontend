@@ -21,7 +21,7 @@ export function addFood(foodId = '', userId='', quantity=1) {
 
 /** 清空 */
 export function clearAll(id = '') {
-  return api.get9001(`/orders/delete/${id}`,)
+  return api.get9001(`api/orders/delete/${id}`,)
 }
 
 /** 移除 */
