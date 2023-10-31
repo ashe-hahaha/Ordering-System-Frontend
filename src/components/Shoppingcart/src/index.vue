@@ -64,6 +64,28 @@ export default class ShoppingCart extends Vue {
     try {
       if (this.userId) {
         const data = await getSpt(this.userId)
+        // this.data = {
+        //   id: data.Id
+        // }
+        // {
+        //   id?: string;
+        //   name?: string;
+        //   img?: string;
+        //   desc?: string;
+        //   number?: number;
+        //   price?: number;
+        // }
+        // {
+        //   "Id": 1,
+        //   "foodMenuID": 2,
+        //   "foodName": "Example Food",
+        //   "foodPrice": 10.99,
+        //   "quantity": 5,
+        //   "user_id": "exampleUser"
+        // }
+        console.log(data)
+        console.log(data.data)
+        console.log(data.data.content)
         this.data = data.data.content
       } else {
         this.data = []
