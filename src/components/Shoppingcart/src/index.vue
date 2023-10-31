@@ -73,25 +73,6 @@ export default class ShoppingCart extends Vue {
             price: shoppingRecord.foodPrice,
           }
         })
-        console.log(this.data)
-        // {
-        //   id?: string;
-        //   name?: string;
-        //   img?: string;
-        //   desc?: string;
-        //   number?: number;
-        //   price?: number;
-        // }
-        // {
-        //   "id": 1,
-        //   "foodMenuID": 2,
-        //   "foodName": "Example Food",
-        //   "foodPrice": 10.99,
-        //   "quantity": 5,
-        //   "user_id": "exampleUser"
-        // }
-        console.log(data.data)
-        // this.data = data.data
       } else {
         this.data = []
       }
