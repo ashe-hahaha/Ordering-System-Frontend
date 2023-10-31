@@ -193,8 +193,8 @@ export default class Shop extends Vue {
           // [propName: string]: any;
         }
       }
-    console.log(this.shop.food)
-    console.log(this.shop.shop)
+    // console.log(this.shop.food)
+    // console.log(this.shop.shop)
     } catch (err) {
       console.log(err)
     }
@@ -224,7 +224,7 @@ export default class Shop extends Vue {
       //   packagingCosts: ?number;
       // }
       this.$set(this.foodVal, 'goodD', { ...data.data.food })
-      console.log(this.foodVal.goodD)
+      // console.log(this.foodVal.goodD)
       this.visible = true
     } catch (err) {
       console.log(err)

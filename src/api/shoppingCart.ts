@@ -11,7 +11,7 @@ export function getSptAll() {
 
 /** 获取购物车 */
 export function getSpt(id = '') {
-  return api.get9001(`/shoppingcart/${id}`)
+  return api.get9001(`api/orders/find/${id}`)
 }
 
 /** 添加 */
