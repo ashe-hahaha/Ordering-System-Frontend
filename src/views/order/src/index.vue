@@ -39,11 +39,16 @@ export default class Order extends Vue {
     // this.orderData = {
     //   ...data.data
     // }
+    this.orderData = {
+      firest: [],
+      second: [],
+      third: [],
+      fourth: []
+    }
     data.data.forEach((orders: any) => {
       orders.forEach((order: any) => {
         switch (order.orderStatus) {
           // Processing, Paid, Finished
-
           case "Processing":
             if (!this.orderData.second){
               this.orderData = {
