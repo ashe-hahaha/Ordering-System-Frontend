@@ -284,7 +284,9 @@ export default class Shop extends Vue {
               <div class="img-top">
                 {/* <img src={this.shop?.shop?.coverImg && this.shop?.shop?.coverImg[0]} /> */}
                 {/* <img :src="require(this.shop?.shop?.coverImg)" alt=""> */}
-                <img src="'./assets/images/delicious3.jpg'" alt=""></img>
+                {/* <img src="./assets/images/delicious3.jpg" alt=""></img> */}
+                <img src="/0001(1).png"></img>
+                <div style="background-image: url('0001(1).png');"></div>
               </div>
               {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {
