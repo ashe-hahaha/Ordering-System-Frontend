@@ -15,8 +15,8 @@ export function getSpt(id = '') {
 }
 
 /** 添加 */
-export function addFood(params = {}) {
-  return api.post9001(`/api/orders`, params)
+export function addFood(foodId = '', userId='', quantity=1) {
+  return api.post9001(`api/orders/${foodId}/${userId}/${quantity}`)
 }
 
 /** 清空 */

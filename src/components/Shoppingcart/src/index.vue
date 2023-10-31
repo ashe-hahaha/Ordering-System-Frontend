@@ -82,11 +82,14 @@ export default class ShoppingCart extends Vue {
   }
 
   shopping(foodId: string) {
-    const params = {
-      foodId,
-      userId: this.userId
-    }
-    addFood(params)
+    // const params = {
+    //   foodId,
+    //   userId: this.userId
+    //   quantity:1
+    // }
+    const userId = this.userId
+    console.log(foodId,userId)
+    addFood(foodId,userId,1)
       .then((res) => {
         this.$message({
           type: 'success',
