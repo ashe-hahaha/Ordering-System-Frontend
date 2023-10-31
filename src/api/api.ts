@@ -12,18 +12,18 @@ enum httpMethods {
 }
 
 const request = axios.create({
-  baseURL:'http://localhost:9003/',
+  baseURL:'http://43.134.66.209:9003/',
   // baseURL: '/customers',
   timeout: 2000
 });
 
 const request9002 = axios.create({
-  baseURL:'http://localhost:9002/',
+  baseURL:'http://43.134.66.209:9002/',
   timeout: 2000
 });
 
 const request9001 = axios.create({
-  baseURL:'http://localhost:9001/',
+  baseURL:'http://43.134.66.209:9001/',
   timeout: 2000
 });
 
