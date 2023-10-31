@@ -158,17 +158,10 @@ export default class Order extends Vue {
         }
       });
     });
+  console.log(data.data)
   console.log(this.orderData)
 
   }
-  // "userName": 1,
-  // "restaurantId": 1,
-  // "restaurantName": "chinese food",
-  // "orderTime": null,
-  // "orderStatus": "Processing",
-  // "totalPrice": 22.0,
-  // "foodItem": [],
-  // "id": 1
 
   protected render() {
     return (
