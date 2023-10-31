@@ -71,7 +71,7 @@ export default class ShoppingCart extends Vue {
             name: shoppingRecord.foodName,
             number: shoppingRecord.quantity,
             price: shoppingRecord.foodPrice,
-            foodid: shoppingRecord.Id,
+            foodid: shoppingRecord.id,
           }
         })
         console.log(data.data)
