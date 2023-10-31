@@ -193,7 +193,7 @@ export default class Shop extends Vue {
           // [propName: string]: any;
         }
       }
-    console.log(this.shop.shop?.coverImg)
+    // console.log(this.shop.shop?.coverImg)
     // console.log(this.shop.food)
     // console.log(this.shop.shop)
     } catch (err) {
