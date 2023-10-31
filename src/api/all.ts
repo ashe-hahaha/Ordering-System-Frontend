@@ -21,7 +21,7 @@ export function getFoodByName(params = {}) {
 
 /** 订单 */
 export function getOrder(id = '') {
-  return api.get(`/orderForm/${id}`)
+  return api.get9001(`/orderForm/${id}`)
 }
 
 /** 订单 */
