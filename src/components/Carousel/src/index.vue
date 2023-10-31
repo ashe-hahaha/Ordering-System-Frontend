@@ -43,7 +43,6 @@ export default class Carousel extends Vue {
     this.foodTypeList = content.data.map((shop: any) => {
       return shop.restaurantCatalog
     })
-    console.log(this.foodTypeList)
     // this.foodTypeList = [
     //   { id: '1', label: 'Category A', icon: 'icon-a', color: 'blue' },
     //   { id: '2', label: 'Category B', icon: 'icon-b', color: 'green' },
@@ -64,7 +63,7 @@ export default class Carousel extends Vue {
                     class="food-type"
                     onClick={() => this.$router.push({ name: 'shoplist', params: { typeId: item.id || '' } })}>
                     <i class={item.icon} style={'color:' + item.color + ';'}></i>
-                    <a href="#">{item.label}</a>
+                    <a href="#">{item}</a>
                   </li>
                 )
               })}
