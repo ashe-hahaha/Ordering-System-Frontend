@@ -74,6 +74,7 @@ export default class ShoppingCart extends Vue {
             foodid: shoppingRecord.foodItemId,
           }
         })
+        console.log(this.data)
       } else {
         this.data = []
       }
