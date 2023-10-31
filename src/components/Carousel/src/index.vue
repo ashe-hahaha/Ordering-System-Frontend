@@ -48,15 +48,6 @@ export default class Carousel extends Vue {
         icon: 'icon-a',
       }
     })
-    console.log(this.foodTypeList)
-    this.foodTypeList.map((cat) => {
-      console.log(cat.label)
-    })
-    // this.foodTypeList = [
-    //   { id: '1', label: 'Category A', icon: 'icon-a', color: 'blue' },
-    //   { id: '2', label: 'Category B', icon: 'icon-b', color: 'green' },
-    //   { id: '3', label: 'Category C', icon: 'icon-c', color: 'red' }
-    // ];
   }
 
   protected render() {

@@ -71,10 +71,9 @@ export default class ShoppingCart extends Vue {
             name: shoppingRecord.foodName,
             number: shoppingRecord.quantity,
             price: shoppingRecord.foodPrice,
-            foodid: shoppingRecord.foodItemId,
+            foodid: shoppingRecord.Id,
           }
         })
-        console.log(this.data)
       } else {
         this.data = []
       }
@@ -126,8 +125,6 @@ export default class ShoppingCart extends Vue {
 
   clearFood(row: any, e: any) {
     e.stopPropagation()
-    console.log(row)
-    console.log(this.userId)
     removeFood(row, this.userId).then(() => {
       this.hideDialog()
     })
