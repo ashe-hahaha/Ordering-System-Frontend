@@ -291,7 +291,7 @@ export default class Shop extends Vue {
                 {/* <img :src="require(this.shop?.shop?.coverImg)" alt=""> */}
                 {/* <img src="./assets/images/delicious3.jpg" alt=""></img> */}
                 {/* <img width="100%" height="100%" :src="imgsrc" /> */}
-                <img src="@/assets/images/delicious3.jpg" alt="Delicious Image" />
+                <img src="https://tieba.baidu.com/photo/p?kw=dota2&flux=1&tid=8682246782&pic_id=9e567d380cd7912309a6ba41eb345982b3b78093&pn=1&fp=2&see_lz=1&post_id=148911824131" alt="Dota 2" />
               </div>
               {/* <div>
                 {this.shop?.shop?.coverImg?.map((item) => {
