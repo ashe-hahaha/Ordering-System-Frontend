@@ -39,4 +39,4 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         source: "dist/"
-        target: "/home/ubuntu/Ordering-System-Frontend"
+        target: "/home/ubuntu/Ordering-System-Frontend/"
