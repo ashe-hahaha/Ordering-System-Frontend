@@ -38,7 +38,7 @@ jobs:
 
     - name: List Server Directory
       run: |
-        ssh -i ${{ secrets.SERVER_PASSWORD }} -o StrictHostKeyChecking=nov ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "ls -al /home/ubuntu/Ordering-System-Frontend/"
+        ssh -i ${{ secrets.SERVER_PASSWORD }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "ls -al /home/ubuntu/Ordering-System-Frontend/"
 
 
 
