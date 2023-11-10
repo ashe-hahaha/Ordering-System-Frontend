@@ -36,6 +36,11 @@ jobs:
     # - name: Debug - List contents of target directory
     #   run: ls -al home/ubuntu/Ordering-System-Frontend/
 
+    - name: List Server Directory
+      run: |
+        ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "ls -al /home/ubuntu/Ordering-System-Frontend/"
+
+
 
   deploy:
     runs-on: ubuntu-latest
