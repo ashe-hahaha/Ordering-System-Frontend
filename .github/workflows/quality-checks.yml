@@ -1,0 +1,33 @@
+name: Quality Checks
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linters and Code Analysis
+        run: |
+          npm run lint
+
+      # - name: Run Unit Tests
+      #   run: npm test
+
+      # - name: Code Coverage
+      #   run: npm run coverage
+
