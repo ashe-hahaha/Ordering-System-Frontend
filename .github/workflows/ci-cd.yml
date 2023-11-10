@@ -34,7 +34,7 @@ jobs:
       run: ls -al dist
 
     - name: Debug - List contents of target directory
-      run: ls -al /home/ubuntu/Ordering-System-Frontend
+      run: ls -al home/ubuntu/Ordering-System-Frontend/
 
 
   deploy:
@@ -49,4 +49,4 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         source: "dist/"
-        target: "/home/ubuntu/Ordering-System-Frontend/"
+        target: "home/ubuntu/Ordering-System-Frontend/"
