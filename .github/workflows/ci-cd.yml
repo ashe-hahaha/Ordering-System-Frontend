@@ -27,12 +27,11 @@ jobs:
     # - name: Debug - List contents of dist/
     #   run: ls dist/
 
-    - name: Debug - List contents of working directory
-      run: ls -al
-
+    # - name: Debug - List contents of working directory
+    #   run: ls -al
 
     - name: Debug - List contents of source directory
-      run: ls -al /github/workspace
+      run: ls -al /dist
 
     - name: Debug - List contents of target directory
       run: ls -al /home/ubuntu/Ordering-System-Frontend
@@ -49,5 +48,5 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
-        source: "dist/"
+        source: "/dist/"
         target: "/home/ubuntu/Ordering-System-Frontend/"
