@@ -27,6 +27,13 @@ jobs:
     - name: Debug - List contents of dist/
       run: ls dist/
 
+    - name: Debug - List contents of source directory
+      run: ls -al /github/workspace
+
+    - name: Debug - List contents of target directory
+      run: ls -al /home/ubuntu/Ordering-System-Frontend
+
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
