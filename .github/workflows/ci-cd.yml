@@ -24,12 +24,12 @@ jobs:
     - name: Build
       run: npm run build
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Deploy to server
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - name: Deploy to server
+  #     uses: ad-m/github-push-action@master
+  #     with:
+  #       github_token: ${{ secrets.GITHUB_TOKEN }}
+  #       branch: main
